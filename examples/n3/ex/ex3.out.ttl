@@ -1,0 +1,53 @@
+#Processed by Id: cwm.py,v 1.197 2007/12/13 15:38:39 syosi Exp 
+        #    using base file:///Users/finin/Sites/691s13/examples/n3/ex/ex3.ttl
+        
+#  Notation3 generation by
+#       notation3.py,v 1.200 2007/12/11 21:18:08 syosi Exp
+
+#   Base was: file:///Users/finin/Sites/691s13/examples/n3/ex/ex3.ttl
+    @prefix f: <http://691.finin.org/o/family#> .
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    
+    rdf:type     a rdf:Property,
+                rdfs:Resource .
+    
+    <#cain>     a rdfs:Resource,
+                foaf:Person .
+    
+    <#eve>     a f:Woman,
+                rdfs:Resource,
+                foaf:Person;
+         f:mother_of <#cain>;
+         f:parent_of <#cain> .
+    
+    f:Woman     a rdfs:Resource .
+    
+    f:mother_of     a rdf:Property,
+                rdfs:Resource;
+         rdfs:domain f:Woman;
+         rdfs:subPropertyOf f:parent_of .
+    
+    f:parent_of     a rdf:Property,
+                rdfs:Resource;
+         rdfs:domain foaf:Person;
+         rdfs:range foaf:Person .
+    
+    rdf:Property     a rdfs:Resource .
+    
+    rdfs:Resource     a rdfs:Resource .
+    
+    rdfs:domain     a rdf:Property,
+                rdfs:Resource .
+    
+    rdfs:range     a rdf:Property,
+                rdfs:Resource .
+    
+    rdfs:subPropertyOf     a rdf:Property,
+                rdfs:Resource .
+    
+    foaf:Person     a rdfs:Resource .
+    
+#ENDS

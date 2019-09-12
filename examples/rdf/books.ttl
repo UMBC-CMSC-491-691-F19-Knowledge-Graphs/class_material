@@ -1,0 +1,48 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc:        <http://purl.org/dc/elements/1.1/> .
+@prefix vcard:     <http://www.w3.org/2001/vcard-rdf/3.0#> .
+@prefix ns:        <http://example.org/ns#> .
+
+@prefix :          <http://example.org/book/> .
+
+# A small dataset for usage examples of fuseki and pubby.
+
+:collection 
+  :has_book :book1, :book2, :book3, :book4, :book5, :book6, :book7 .
+
+:jkr a foaf:Person;
+  foaf:name "J.K. Rowling" ;
+  rdf:label "J.K. Rowling" ;
+  vcard:FN "J.K. Rowling" ;
+  vcard:N
+   [ vcard:Family "Rowling" ;
+     vcard:Given "Joanna" ] .
+
+:book1
+  dc:title    "Harry Potter and the Philosopher's Stone" ;
+  dc:creator  :jkr .
+
+:book2
+  dc:title    "Harry Potter and the Chamber of Secrets" ;
+  dc:creator  :jkr .
+    
+:book3
+  dc:title    "Harry Potter and the Prisoner Of Azkaban" ;
+  dc:creator  :jkr .
+    
+:book4
+  dc:title    "Harry Potter and the Goblet of Fire";
+  dc:creator  :jkr .
+    
+:book5
+  dc:title    "Harry Potter and the Order of the Phoenix";
+  dc:creator  :jkr .
+
+:book6
+  dc:title    "Harry Potter and the Half-Blood Prince";
+  dc:creator  :jkr .
+
+:book7
+    dc:title    "Harry Potter and the Deathly Hallows" ;
+    dc:creator  "J.K. Rowling" .

@@ -1,0 +1,30 @@
+# A simple example of family relations using the gedcom vocabulary.
+
+@prefix : <#> .
+@prefix gc: <http://www.daml.org/2001/01/gedcom/gedcom#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+# data from the Bible in GEDCOM form
+
+:fam1 a gc:Family.
+
+:Able gc:sex gc:Male;
+  gc:givenName "Able";
+  gc:childIn :fam1 .
+
+:Cain gc:sex gc:Male;
+  gc:givenName "Cain";
+  gc:childIn :fam1 .
+
+:Adam gc:sex gc:Male;
+  gc:givenName "Adam";
+  gc:spouseIn :fam1 .
+
+:Eve gc:sex gc:Female;
+  gc:givenName "Eve";
+  gc:spouseIn :fam1 .
+
+[a owl:AllDifferent;
+ owl:distinctMembers (:Able :Cain :Adam :Eve)] .
+
+

@@ -1,0 +1,5 @@
+<http://umbc.edu/~finin/talks/idm02/> <http://purl.org/dc/elements/1.1/title> "Intelligent Information Systems on the Web" .
+<http://umbc.edu/~finin/talks/idm02/> <http://purl.org/dc/elements/1.1/creator> _:node17i6o19h3x1 .
+_:node17i6o19h3x1 <http://daml.umbc.edu/ontologies/bib/Name> "Tim Finin" .
+_:node17i6o19h3x1 <http://daml.umbc.edu/ontologies/bib/Email> "finin@umbc.edu" .
+_:node17i6o19h3x1 <http://daml.umbc.edu/ontologies/bib/Aff> <http://umbc.edu/> .

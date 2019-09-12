@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:bib="http://daml.umbc.edu/ontologies/bib/">
+<rdf:Description rdf:about="http://umbc.edu/~finin/talks/idm02/">
+  <dc:title>Intelligent Information Systems on the Web</dc:title>
+  <dc:creator>
+    <rdf:Description>
+      <bib:Name>Tim Finin</bib:Name>
+      <bib:Email>finin@umbc.edu</bib:Email>
+      <bib:Aff rdf:resource="http://umbc.edu/" />
+    </rdf:Description> 
+  </dc:creator>
+</rdf:Description>
+</rdf:RDF>

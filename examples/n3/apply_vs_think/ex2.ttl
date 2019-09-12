@@ -1,0 +1,9 @@
+@prefix : <#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:Mammal rdfs:subClassOf :Animal .
+:Person rdfs:subClassOf :Mammal .
+:Student rdfs:subClassOf :Person .
+
+:john a :Student.
+

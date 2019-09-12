@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/691.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="shortcut icon" href="images/kg_favicon.ico">
+<!-- InstanceBeginEditable name="doctitle" -->
+
+<title>UMBC CMSC 491/691 A Web of Data</title>
+
+<!-- InstanceEndEditable -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-72855529-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<style type="text/css">
+<!--
+body {
+	background-color: #DBDBDB;
+}
+.boldlinks {A {text-decoration: none;color:white}
+.boldlinks  A:hover {font-weight:bold;}
+-->
+</style>
+<link href="../../691.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style17 {color: #FFFFFF}
+.style18 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+}
+.style20 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+}
+.style2 {
+	font-size: large;
+
+	font-weight: bold;
+}
+.style4 {font-size: 24px}
+.style5 {font-size: 32px}
+.imgresize{
+    width:100%;
+}
+.imgtag{
+    width:100%;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+.style17 {color: #FFFFFF}
+.style18 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+}
+.style20 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body>
+<table width="90%" border="0" align="center" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+  <tr>
+    <td><table width="100%" border="0" align="center" cellspacing="0" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+        <tr>
+			<td width="10%" bordercolor="#E8E8E8" bgcolor="#99CCFF" id="header"><img src="../../images/kg2.png" style="display:block; width:100%; height:auto;" alt=""></td>
+			<td width="90%" bordercolor="#E8E8E8" bgcolor="#99CCFF" id="header2"><div align="center">            
+            <p><span class="style18">UMBC CMSC 491/691 (07) Fall 2019</span><br/>
+            <span class="style20">Knowledge Graphs</span></p>
+          </div></td>
+        </tr>
+        <tr>
+          <td colspan="3" bgcolor="#000000">
+            <div id="nav"><span class="style17"><a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/index.html">Home</a> &middot;<a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/syllabus.html"> Syllabus</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/schedule.html">Schedule</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/hw">HW</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/exams">Exams</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/notes">Notes</a> &middot; <a href="https://github.com/UMBC-CMSC-491-691-F19-Knowledge-Graphs/">GitHub</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/examples">Examples</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/resources.html">Resources</a> &middot; <a href="https://blackboard.umbc.edu/ultra/courses/_49846_1/cl/outline">Blackboard</a> &middot;<a href="https://piazza.com/umbc/fall2019/cmsc491691section07/home"> Piazza</a></span></div>         </td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td width="100%" bordercolor="#EAEAEA" bgcolor="#FFFFFF" id="content"><!-- InstanceBeginEditable name="BODY" -->
+    
+<div> <img src="../../images/mental_schemas800x250.jpg" style="width:100%"/> </div>
+     
+<h1 align="center"><strong>draft</strong> Assignment Two: XML <strong>draft</strong></h1>
+ <h1> out Wednesday 9/11, due 11:59pm Wednesday 9/25 </h1>
+      
+      <p>Click <a href="">here</a> to accept the assignment and have a github repository created for it.</p>
+      <p>It's important for us to understand and be able to work with XML for several reasons.  First, XML was designed as an expressive language to store and exchange <a href="http://en.wikipedia.org/wiki/Semi-structured_data">semi-structured data</a>.  As such, it is an alternative to RDF and other semantic web languages.  Second, semantic web languages rely on many components of (or associated with) XML such as <a href="http://en.wikipedia.org/wiki/Unicode">unicode</a>, <a href="http://en.wikipedia.org/wiki/Uniform_resource_identifier">URIs</a>, <a href="http://en.wikipedia.org/wiki/XML_namespace">XML namespaces</a> and XSD <a href="http://www.w3.org/TR/xmlschema-2/">datatypes</a>.  Finally, the XML serialization for RDF was the first one developed and first serialization for RDF and continues to be widely used.</p>
+      <p>You are asked to develop an XML representation for the UMBC course offerings. 
+        Review a sample of computer science courses from the UMBC 
+          <a href="https://highpoint-prd.ps.umbc.edu/app/catalog/classSearch">Fall 2018 schedule</a> for the data that is associated 
+      with courses. Specifically </p>
+      <ul>
+        <li> design an appropriate XML representation and express it using an 
+          <a href="https://www.w3schools.com/xml/schema_intro.asp">XML Schema</a> (not a DTD) file</li>
+        <li> use your XML representation to encode the data for CMSC 435 and 471 from the Fall 2018 schedule.</li>
+        <li> develop a simple <a href="https://www.w3schools.com/xml/xsl_intro.asp">XSLT transformation</a> to render this as HTML</li>
+      </ul>
+You will find the material in  appendix A of the Semantic Web Primer helpful.
+
+      <h4>(1) Designing your representation</h4>
+      <p>Your first job is to produce the XML Schema for your representation, 
+        giving it the name <strong>schedule.xsd</strong></p>
+      <p>Even this simple problem can result in a complex representation. You 
+        don't need to do this. You can make the following simplifying assumptions:</p>
+      <ul>
+        <li>Courses meet in the same room and at the same time on each day that 
+          it meets.</li>
+        <li>Courses have only one instructor</li>
+      </ul>
+      <p>You can find the standard XML data types in the W3C's <a href="http://www.w3.org/TR/xmlschema-2/#time">XML 
+        Schema Part 2: Datatypes</a> document. Feel free to use the <a href="http://www.w3.org/TR/xmlschema-2/#string">xs:string</a> 
+        data type freely. Of course, if you want, you can use other data types 
+        (e.g., <a href="http://www.w3.org/TR/xmlschema-2/#gYear">xs:gYear</a>, 
+        <a href="http://www.w3.org/TR/xmlschema-2/#time">xs:time</a>, <a href="http://www.w3.org/TR/xmlschema-2/#nonNegativeInteger">xs:nonNegativeInteger</a>) 
+        but my advice is to keep it simple. be sure to add appropriate comments 
+        to help a person reading your schema understand it and how it is to be 
+        used. </p>
+      <p>Here's a sketch of the elements you might use. You can choose your own 
+        set of elements and your own names.        </p>
+      <blockquote>
+        <pre>
+A schedule has
+  a year (e.g., 2019) 
+  a semester (e.g., Fall)
+  one or more courses.
+
+a course has 
+ a program identifier (e.g., CMSC) 
+ a number (e.g., 471)
+ a classNumber (e.g., 1136)
+ a title (e.g., Introduction to Artificial Intelligence)
+ a number of credits (e.g., 3)
+ zero or more prerequisite classes (e.g., CMSC341)
+ a description (e.g., This course provides a broad...sections.)
+
+A section has
+ a section number (e.g., 01)
+ an instructor (e.g., John Park)
+ a scheduleNumber (e.g., 1532)
+ a room (e.g., Sherman Hall 013)
+ a days (e.g., TuThr)
+ a startTime (e.g., 10:00am)
+ an endTime (e.g., 11:15am)
+ a status (e.g., Open or Closed)</pre></blockquote>
+      <h4>(2) An example data file </h4>
+      <p>The second step is to use your schema file to create an example XML data 
+        file for a part of the Fall 2019 Schedule. In particular, encode data 
+        for CMSC  435 and 471 from the <a href="https://highpoint-prd.ps.umbc.edu/app/catalog/classSearch">Fall 2019 course schedule</a> (be sure to change the Term to Fall 2019 in the search form and view both open and closed sections). Name this file <strong>fall2019.xml.</strong> Your XML file should reference the xsl transform and also the xml schema file. Referencing the schema file in your xml document requires adding two things to the root element:</p>
+      <ul>
+<li> A declaration of the XML Schema instance namespace, e.g., <em>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"</em></li>
+<li> A link to your schema file using the XML Schema instance schemaLocation property, e.g., <em>xsi:schemaLocation="http://umbc.edu/~finin/schedule.xsd"</em></li>
+</ul>
+      <p>See the <a href="../../examples/xml/expenseReport/">expense report example</a> and note how <a href="../../examples/xml/expenseReport/expenses.xml">expenses.xml</a> links to its xsd schema file and xsl transform file. We've included two directories in your initial hw2 repository, expenses and cdcatalog that you may find helpful to review.</p>
+      <h4>(3) An XSLT transformation file</h4>
+      <p>The third step is to use XSLT to create a transform that will convert 
+        your xml file into a legal HTML file.  The design of this is up to you, but use a good design that makes it clear and easy to understand and read. Name this file <strong>schedule.xsl</strong>.      </p>
+      <h4>(4) What to hand in</h4>
+      <p>You should commit and push the following three files to your github HW2 repository, which will be made available on September 20 or 21.</p>
+      <ul>
+        <li><strong>schedule.xsd</strong> - the schema file for a university schedule</li>
+        <li><strong>fall2019.xml</strong> - your data for the courses 435 and 461</li>
+        <li><strong>schedule.xsl</strong> - the xsl transform file for a university schedule</li>
+        <li><strong>notes.md</strong> - Some brief notes describing what you did including what software tools you used and anything you found interesting about the process (Please use <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">github's markdown</a> formatting scheme as appropriate)<br />
+        </li>
+      </ul>
+      <h4>Tools you can use</h4>
+      <p>You can develop your files using simple tools like emacs, atom or eclipse. 
+        All have packages to support XML: gnu emacs as <a href="http://www.thaiopensource.com/nxml-mode/">nxml</a> mode and Eclipse has several, (e.g. <a href="http://editorxml.sourceforge.net/">Rinzo</a>). There are a number of good commercial XML editors and most have a way you can evaluate the product for long enough to do this assignment. For example, you might check out <a href="http://www.altova.com/xmlspy.html">XMLSpy</a> or <a href="http://www.oxygenxml.com/download.html">oXygen</a>. You might also look the Wikipedia page <a href="http://en.wikipedia.org/wiki/Comparison_of_XML_editors">comparing XML editors.</a> Github's <a href="https://atom.io/">Atom</a> editor also has packages supporting XML,</p>
+      <p>There are online tools for validating an XML file, and XSD schema and also for validating that an XML file follows an XSD schema (e.g., <a href="http://www.utilities-online.info/xsdvalidation/">here</a>), and for validating an XSL transform and applying it to an XML file (e.g., <a href="http://www.utilities-online.info/xsltransformation/">here</a>).</p>
+      <p>&nbsp;</p>
+        <!-- InstanceEndEditable -->
+      <p>
+      <div id="footer" class="donotprint">
+  <div><a href="index.html">CMSC 491/691 Knowledge Graphs&mdash;Fall 2019</a></div>
+        <a href="http://www.cs.umbc.edu/">CSEE</a> |
+    <a href="http://www.umbc.edu/">UMBC</a></div></p> </td> 
+  </tr>
+</table></body><!-- InstanceEnd --></html>
+

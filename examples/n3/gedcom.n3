@@ -1,0 +1,163 @@
+#Processed by Id: cwm.py,v 1.164 2004/10/28 17:41:59 timbl Exp 
+# using base http://www.daml.org/2001/01/gedcom/gedcom
+        
+#  Notation3 generation by
+#       notation3.py,v 1.166 2004/10/28 17:41:59 timbl Exp
+
+#   Base was: http://www.daml.org/2001/01/gedcom/gedcom
+
+@prefix : <http://www.w3.org/2002/07/owl#> .
+@prefix XML: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ged: <#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    
+<>     a :Ontology;
+rdfs:comment "Genealogical Data Communication (GEDCOM) represented in DAML+OIL";
+:versionInfo "$Id: gedcom.daml,v 1.15 2002/09/06 15:38:18 mdean Exp $" .
+
+ged:Birth a rdfs:Class; rdfs:subClassOf ged:IndividualEvent .
+
+ged:Death a rdfs:Class; rdfs:subClassOf ged:IndividualEvent .
+
+ged:Divorce a rdfs:Class; rdfs:subClassOf ged:FamilyEvent .
+
+ged:Event a rdfs:Class;
+rdfs:subClassOf  [
+    a :Restriction;
+    :allValuesFrom XML:string;
+    :onProperty ged:date ],
+        [
+    a :Restriction;
+    :maxCardinality "1";
+    :onProperty ged:date ],
+        [
+    a :Restriction;
+    :allValuesFrom XML:string;
+    :onProperty ged:place ],
+        [
+    a :Restriction;
+    :maxCardinality "1";
+    :onProperty ged:place ] .
+
+ged:Family a rdfs:Class;
+  rdfs:comment "A family named in a GEDCOM file.";
+  rdfs:subClassOf  [
+    a :Restriction;
+    :allValuesFrom ged:Marriage;
+    :onProperty ged:marriage ],
+        [
+    a :Restriction;
+    :allValuesFrom ged:Divorce;
+    :onProperty ged:divorce ] .
+
+ged:FamilyEvent a rdfs:Class; rdfs:subClassOf ged:Event .
+
+ged:Individual a rdfs:Class;
+rdfs:comment "An individual named in a GEDCOM file.";
+rdfs:subClassOf  [
+    a :Restriction;
+    :allValuesFrom XML:string;
+    :onProperty ged:givenName ],
+        [
+    a :Restriction;
+    :maxCardinality "1";
+    :onProperty ged:givenName ],
+        [
+    a :Restriction;
+    :allValuesFrom XML:string;
+    :onProperty ged:surname ],
+        [
+    a :Restriction;
+    :maxCardinality "1";
+    :onProperty ged:surname ],
+        [
+    a :Restriction;
+    :allValuesFrom XML:string;
+    :onProperty ged:name ],
+        [
+    a :Restriction;
+    :maxCardinality "1";
+    :onProperty ged:name ],
+        [
+    a :Restriction;
+    :allValuesFrom XML:string;
+    :onProperty ged:sex ],
+        [
+    a :Restriction;
+    :maxCardinality "1";
+    :onProperty ged:sex ],
+        [
+    a :Restriction;
+    :allValuesFrom XML:string;
+    :onProperty ged:title ],
+        [
+    a :Restriction;
+    :maxCardinality "1";
+    :onProperty ged:title ],
+        [
+    a :Restriction;
+    :allValuesFrom ged:Family;
+    :onProperty ged:spouseIn ],
+        [
+    a :Restriction;
+    :allValuesFrom ged:Family;
+    :onProperty ged:childIn ],
+        [
+    a :Restriction;
+    :maxCardinality "1";
+    :onProperty ged:childIn ],
+        [
+    a :Restriction;
+    :allValuesFrom ged:Birth;
+    :onProperty ged:birth ],
+        [
+    a :Restriction;
+    :maxCardinality "1";
+    :onProperty ged:birth ],
+        [
+    a :Restriction;
+    :allValuesFrom ged:Death;
+    :onProperty ged:death ],
+        [
+    a :Restriction;
+    :maxCardinality "1";
+    :onProperty ged:death ];
+= <../../03/daml+oil-ex#Person> .
+
+ged:IndividualEvent a rdfs:Class; rdfs:subClassOf ged:Event .
+
+ged:Marriage a rdfs:Class; rdfs:subClassOf ged:FamilyEvent .
+
+ged:birth a :ObjectProperty; rdfs:subPropertyOf ged:individualEventProperty .
+
+ged:childIn a :ObjectProperty .
+
+ged:date a :DatatypeProperty .
+
+ged:death a :ObjectProperty; rdfs:subPropertyOf ged:individualEventProperty .
+
+ged:divorce a :ObjectProperty; rdfs:subPropertyOf ged:familyEventProperty .
+
+ged:eventProperty a :ObjectProperty .
+
+ged:familyEventProperty a :ObjectProperty; rdfs:subPropertyOf ged:eventProperty .
+
+ged:givenName a :DatatypeProperty .
+
+ged:individualEventProperty a :ObjectProperty; rdfs:subPropertyOf ged:eventProperty .
+
+ged:marriage a :ObjectProperty; rdfs:subPropertyOf ged:familyEventProperty .
+
+ged:name a :DatatypeProperty .
+
+ged:place a :DatatypeProperty .
+
+ged:sex a :DatatypeProperty .
+
+ged:spouseIn a :ObjectProperty .
+
+ged:surname a :DatatypeProperty .
+
+ged:title a :DatatypeProperty .
+
+#ENDS

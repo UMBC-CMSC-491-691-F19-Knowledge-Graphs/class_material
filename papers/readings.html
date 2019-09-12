@@ -1,0 +1,470 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/691.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="shortcut icon" href="images/kg_favicon.ico">
+<!-- InstanceBeginEditable name="doctitle" -->
+
+<title>UMBC CMSC 491/691 The Semantic Web</title>
+
+<!-- InstanceEndEditable -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-72855529-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<style type="text/css">
+<!--
+body {
+	background-color: #DBDBDB;
+}
+.boldlinks {A {text-decoration: none;color:white}
+.boldlinks  A:hover {font-weight:bold;}
+-->
+</style>
+<link href="../691.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style17 {color: #FFFFFF}
+.style18 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+}
+.style20 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+}
+.style2 {
+	font-size: large;
+
+	font-weight: bold;
+}
+.style4 {font-size: 24px}
+.style5 {font-size: 32px}
+.imgresize{
+    width:100%;
+}
+.imgtag{
+    width:100%;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+.style17 {color: #FFFFFF}
+.style18 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+}
+.style20 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body>
+<table width="90%" border="0" align="center" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+  <tr>
+    <td><table width="100%" border="0" align="center" cellspacing="0" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+        <tr>
+			<td width="10%" bordercolor="#E8E8E8" bgcolor="#99CCFF" id="header"><img src="../images/kg2.png" style="display:block; width:100%; height:auto;" alt=""></td>
+			<td width="90%" bordercolor="#E8E8E8" bgcolor="#99CCFF" id="header2"><div align="center">            
+            <p><span class="style18">UMBC CMSC 491/691 (07) Fall 2019</span><br/>
+            <span class="style20">Knowledge Graphs</span></p>
+          </div></td>
+        </tr>
+        <tr>
+          <td colspan="3" bgcolor="#000000">
+            <div id="nav"><span class="style17"><a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/index.html">Home</a> &middot;<a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/syllabus.html"> Syllabus</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/schedule.html">Schedule</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/hw">HW</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/exams">Exams</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/notes">Notes</a> &middot; <a href="https://github.com/UMBC-CMSC-491-691-F19-Knowledge-Graphs/">GitHub</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/examples">Examples</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/resources.html">Resources</a> &middot; <a href="https://blackboard.umbc.edu/ultra/courses/_49846_1/cl/outline">Blackboard</a> &middot;<a href="https://piazza.com/umbc/fall2019/cmsc491691section07/home"> Piazza</a></span></div>         </td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td width="100%" bordercolor="#EAEAEA" bgcolor="#FFFFFF" id="content"><!-- InstanceBeginEditable name="BODY" -->
+
+Some readings adapted from Professor Jeff Heflin's course at Lehigh University.
+
+<h2>Foundations</h2>
+
+<p>[NB02] D. Nardi and R. J. Brachman. An Introduction to Description Logics. In the Description Logic Handbook, edited by F. Baader, D. Calvanese, D.L. McGuinness, D. Nardi, P.F. Patel-Schneider, Cambridge University Press, 2002, pages 5-44. <a href="http://www.inf.unibz.it/~franconi/dl/course/dlhb/dlhb-01.pdf">(PDF)</a></p>
+
+<a name="bn02">
+<p>[BN02] F. Baader and W. Nutt. Basic Description Logics. In the Description Logic Handbook, edited by F. Baader, D. Calvanese, D.L. McGuinness, D. Nardi, P.F. Patel-Schneider, Cambridge University Press, 2002, pages 47-100. <a href="http://www.inf.unibz.it/~franconi/dl/course/dlhb/dlhb-02.pdf">(PDF)</a></p>
+
+<a name="hps03">
+<p>[HPS03] I. Horrocks and P. Patel-Schneider. Reducing OWL entailment to description logic satisfiability. In Dieter Fensel, Katia Sycara, and John Mylopoulos, editors, <i>Proc. of the 2003 International Semantic Web Conference (ISWC 2003)</i>, number 2870 in Lecture Notes in Computer Science, pages 17-29. Springer, 2003. <a href="http://www.cs.man.ac.uk/~horrocks/Publications/download/2003/HoPa03b.pdf">(PDF)</a></p>
+
+<a name="ht00">
+<p>[HT00] Ian Horrocks and Sergio Tessaris. A Conjunctive Query Language for Description Logic ABoxes. In Proc. of the 17th Nat. Conf. on Artificial Intelligence (AAAI 2000), pages 399-404, 2000. <a href="http://www.comlab.ox.ac.uk/people/ian.horrocks/Publications/download/2000/HoTe00.pdf">(PDF)</a>
+
+<p>[Gru93] T. Gruber. A Translation Approach to Portable Ontology Specifications. <i>Knowledge Acquisition, </i> 5(2):199-220, 1993.
+
+<a name="trb04">
+<p>[TRB04] Dmitry Tsarkov, Alexandre Riazanov, Sean Bechhofer, Ian Horrocks. Using Vampire to Reason with OWL. ISWC 2004. pp. 471-485, 2004. <a href="http://www.cs.man.ac.uk/~horrocks/Publications/download/2004/TRBH04a.pdf">(PDF)</a></p>
+
+
+
+<a name="onteng">
+<h2>Ontology Engineering</h2>
+
+<a name="kfn04">
+<p>[KFN04] H. Knublauch, R. Fergerson, N. Noy, M. Musen. The Protégé OWL Plugin: An Open Development Environment for Semantic Web Applications. <i>Third International Semantic Web Conference (ISWC 2004)</i>, Hiroshima, Japan, 2004. <a href="http://protege.stanford.edu/plugins/owl/publications/ISWC2004-protege-owl.pdf">(PDF)</a>.</p>
+
+<a name="rdh04">
+<p>[RDH04] A. Rector, N. Drummond, M. Horridge, J. Rogers, H. Knublauch, R. Stevens, H. Wang, and C. Wroe. OWL Pizzas: Practical Experience of Teaching OWL-DL: Common Errors & Common Patterns. <i>14th International Conference on
+Knowledge Engineering and Knowledge Management (EKAW 2004)</i>, pp. 63-81. 2004.
+
+<a href="http://www.co-ode.org/resources/papers/ekaw2004.pdf">(PDF)</a></p>
+
+<a name="nm01a">
+<p>[NM01a] N. Noy and D. McGuinness. <i>Ontology Development 101: A Guide to Creating Your First Ontology.</i> Stanford University, 2001. <a href="http://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html">(HTML)</a>.</p>
+
+<p>[DF01] Y. Ding and D. Fensel. Ontology Library Systems: The Key to Successful Ontology Re-Use. In <i>First International Semantic Web Working Symposium (SWWS'01)</i>, 2001.
+
+<p>[DWM01] A. Das, W. Wu, and D. McGuinness. Industrial Strength Ontology Management. In <i>First International Semantic Web Working Symposium (SWWS'01)</i>, 2001.
+
+
+<a name="hp04">
+<p>[HP04] J. Heflin, Z. Pan. A Model Theoretic Semantics for Ontology Versioning. Third International Semantic Web Conference, Hiroshima, Japan, LNCS 3298 Springer (c) , 2004, pp. 62-76. <a href="http://swat.cse.lehigh.edu/pubs/heflin04b.pdf">(PDF)</a></p>
+
+<p>[KF01] M. Klein and D. Fensel. Ontology Versioning on the Semantic Web. In <i>First International Semantic Web Working Symposium (SWWS'01)</i>, 2001.
+
+
+<p>[SK04] Heiner Stuckenschmidt, Michel Klein. Structure-Based Partitioning of Large Concept Hierarchies. ISWC 2004 
+
+<p>[LN04] T. Liebig and O. Noppens. OntoTrack: Combining Browsing and Editing with Reasoning and Explaining for OWL Lite Ontologies. ISWC 2004
+
+
+<p>[FFR97a] A. Farquhar, R. Fikes, and J. Rice. Tools for Assembling Modular Ontologies in Ontolingua. In <i>Proc. of Fourteenth American Association for Artificial Intelligence Conference (AAAI-97)</i>, pp. 436-461, Menlo Park, CA, 1997. AAAI/MIT Press.
+
+<p>[FFR97b] A. Farquhar, R. Fikes, and J. Rice. The Ontolingua Server: A Tool for Collaborative Ontology Construction. <i>International Journal of Human-Computer Studies</i>, 46(6):707-727, 1997.
+
+
+
+<a name="ka">
+
+<h2>Knowledge Acquisition</h2>
+
+<a name="kt03">
+<p>[KT03] N. Kushmerick and B. Thomas. Adaptive Information Extraction: Core Technologies for Information Agents. In Klusch, Bergmaschi, Edwards, and Petta, eds. Intelligent Information Agents - The Agent Link Perspective, LNCS 2586, Springer, 2003, pp. 79-103.
+<a href="http://www.springerlink.com/content/42xnfq6rmadwy2ua/fulltext.pdf">(PDF)</a></p> 
+
+<a name="ecd04">
+<p>[ECD04] O. Etzioni, M. Cafarella, D. Downey, S. Kok, A.-M. Popescu, T. Shaked, S. Soderland, D. S. Weld, A. Yates. Web-Scale Information Extraction in KnowItAll (Preliminary Results) WWW 2004, pp. 100-110. <a href="http://turing.cs.washington.edu/papers/www-paper.pdf">(PDF)</a></p>
+<!-- was at http://www2004.org/proceedings/docs/1p100.pdf -->
+
+<a name="cls05">
+<p>[CLS05] P. Cimiano, G. Ladwig, S. Staab. Gimme' The Context: Context-driven Automatic Semantic Annotation with C-PANKOW. WWW 2005. <a href="http://www2005.org/cdrom/docs/p332.pdf">(PDF)</a></p>
+
+<a name="uci06">
+<p>[UCI06] Uren, V., Cimiano, P., Iria, J., Handschuh, S., Vargas-Vera, M., Motta, E. & Ciravegna, F. Semantic Annotation for Knowledge Management: Requirements and a Survey of the State of the Art Journal of Web Semantics: Science, Services and Agents on the World Wide Web. 2006. <a href="http://www.siegfried-handschuh.net/pub/2006/webSemantics2006.pdf">(PDF)</a></p>
+
+<p>[SKW07] Fabian M. Suchanek, Gjergji Kasneci and Gerhard Weikum. Yago: A Core of Semantic Knowledge - Unifying WordNet and Wikipedia. WWW 2007. <a href="http://www2007.org/papers/paper391.pdf">(PDF)</a></p>
+
+<p>[BM07] Razvan C. Bunescu and Raymond J. Mooney. Learning to Extract Relations from the Web using Minimal Supervision. In Proceedings of the 45th Annual Meeting of the Association for Computational Linguistics (ACL) , Prague, Czech Republic, pp. 576--583, June 2007.
+<a href="http://www.cs.utexas.edu/users/ml/papers/bunescu-acl07.pdf">(PDF)</a>
+
+<a name="mwk05">
+<p>[MWK05] Cynthia Matuszek, Michael Witbrock, Robert C. Kahlert, John Cabral, David Schneider, Purvesh Shah, and Doug Lenat. Searching for Common Sense: Populating Cyc from the Web. AAAI 05. <a href="http://www.cyc.com/doc/white_papers/AAAI051MatuszekC.pdf">(PDF)</a></p>
+
+<p>[BG04] J. Blythe, Y. Gil. Incremental Formalization of Document Annotations through Ontology-Based Paraphrasing. WWW 2004. pp. 455-461
+
+<p>[CHS04] P. Cimiano, S. Handschuh, S. Staab. Towards the Self-Annotating Web. WWW 2004. pp. 462-471. 
+<!-- topic: PANKOW, pred to WWW 2005 paper -->
+
+<p>[PCS04] Aleksander Pivk, Philipp Cimiano, York Sure. From Tables to Frames. ISWC 2004
+
+<p>[WL03] J. Wang and F. Lochovsky. Data Extraction and Label Assignment for Web Databases. In Proceedings of the Twelfth International World Wide Web Conference (WWW2003), Budapest, Hungary, 2003.
+
+<p>[DEG03] S. Dill, N. Eiron, D. Gibson, D. Gruhl, R. Guha, A. Jhingran, T. Kanungo, S. Rajagopalan, A. Tomkins, J. Tomlin, and J. Zien. SemTag and Seeker: Bootstrapping the Semantic Web via Automated Semantic Annotation. In <i>Proceedings of the Twelfth International World Wide Web Conference (WWW2003)</i>, Budapest, Hungary, 2003.
+
+<p>[HSV03] S. Handschuh, S. Staab, and R. Volz. On Deep Annotation. In <i>Proceedings of the Twelfth International World Wide Web Conference (WWW2003)</i>, Budapest, Hungary, 2003.
+
+<p>[SWG05] M. Sabou, C. Wroe, C. Goble, G. Mishne. Learning Domain Ontologies for Web Service Descriptions: an Experiment in Bioinformatics. WWW 2005.
+
+<p>[MS01] A. Madche and S. Staab. Learning Ontologies for the Semantic Web. In <i>Semantic Web Workshop (at WWW10)</i>. May 1, 2001, Hongkong, China. 
+
+
+<p>[AK97] N. Ashish and C. Knoblock. Semi-automatic Wrapper Generation for Internet Information Sources. In <i>Proceedings of the Second IFCIS Conference on Cooperative Information Systems (CoopIS)</i>, Charleston, SC, 1997.
+
+<p>[Col01] N. Collier. Machine Learning for Information Extraction from XML Marked-up Text on the Semantic Web. In <i>Semantic Web Workshop (at WWW10)</i>. May 1, 2001, Hongkong, China. 
+
+<p>[KWD97] N. Kushmerick, D. Weld, and B. Doorenbos. Wrapper induction for information extraction. In <i>Proc. of IJCAI-97</i>, 1997. pp. 729-735. <a href="http://www.smi.ucd.ie/nick/research/download/kushmerick-ijcai97.pdf">(PDF)</a></p>
+
+
+
+<a name="scalability">
+<h2>Scalable Reasoning</h2>
+
+<a name="ghv03">
+<p>[GHV03] Benjamin N. Grosof, Ian Horrocks, Raphael Volz, and Stefan Decker. Description logic programs: Combining logic programs with description logic. In Proc. of the Twelfth International World Wide Web Conference (WWW 2003), pages 48-57. ACM, 2003. <a href="http://www.cs.man.ac.uk/~horrocks/Publications/download/2003/p117-grosof.pdf">(PDF)</a></p>
+
+<a name="gph05">
+<p>[GPH05] Y. Guo, Z. Pan, and J. Heflin. LUBM: A Benchmark for OWL Knowledge Base Systems. Journal of Web Semantics 3(2), 2005, pp158-182. <a href="http://www.websemanticsjournal.org/papers/20050719/document9.pdf">(PDF)</a></p>
+
+<a name="gph04">
+<p>[GPH04] Y. Guo, Z. Pan, and J. Heflin. An Evaluation of Knowledge Base Systems for Large OWL Datasets. Third International Semantic Web Conference, Hiroshima, Japan, LNCS 3298, Spinger, 2004, pp. 274-288. <a href="http://swat.cse.lehigh.edu/pubs/guo04c.pdf">(PDF)</a></p>
+
+<p>[UPS07] Octavian Udrea, Andrea Pugliese, and V. S. Subrahmanian. GRIN: A Graph Based RDF Index. In AAAI, pages 1465-1470, 2007. <a href="http://www.cs.umd.edu/users/udrea/papers/grin.pdf">(PDF)</a></p>
+
+<p>[HMS04] Ullrich Hustadt, Boris Motik, and Ulrike Sattler. Reducing SHIQ- Description Logic to Disjunctive Datalog Programs. In Didier Dubois, Christopher A. Welty, and Mary-Anne Williams, editors, Proc. of the 9th Int. Conference on Pronciples of Knowledge Representation and Reasoning (KR 2004), pages 152-162, Whistler, Canada, June 2-5 2004. AAAI Press. <a href="http://www.comlab.ox.ac.uk/people/boris.motik/pubs/hms04reducing.pdf">(PDF)</a></p>
+
+<p>[GHP03] Y. Guo, J. Heflin, and Z. Pan. Benchmarking DAML+OIL Repositories. <i>The Semantic Web - ISWC 2003</i>, LNCS 2870. Springer, 2003, pp. 613-627. <a href="http://swat.cse.lehigh.edu/pubs/guo03a.pdf">(PDF)</a></p>
+
+<p>[HMS05] Ullrich Hustadt, Boris Motik, and Ulrike Sattler. Data Complexity of Reasoning in Very Expressive Description Logics. IJCAI-05, pp. 466-471. <a href="http://www.comlab.ox.ac.uk/people/boris.motik/pubs/hms05data.pdf">(PDF)</a>
+
+<a name="ms06">
+<p>[MS06] Boris Motik and Ulrike Sattler. A Comparison of Reasoning Techniques for Querying Large Description Logic ABoxes. In Miki Hermann and Andrei Voronkov, editors, Proc. of the 13th Int. Conference on Logic for Programming Artificial Intelligence and Reasoning (LPAR 2006), volume 4246 of LNCS, pages 227-241, Phnom Penh, Cambodia, November 13-17 2006. Springer. <a href="http://www.comlab.ox.ac.uk/people/boris.motik/pubs/ms06kaon2.pdf">(PDF)</a></p>
+
+<p>[MSS05] Motik, Boris; Sattler, Ulrike; Studer, Rudi. Query Answering for OWL-DL with Rules. Web Semantics 3(1). 2005. <a href="http://www.comlab.ox.ac.uk/people/boris.motik/pubs/mss04dl-safe.pdf">(PDF)</a>	
+
+<p>[CDE05] E. Chong, S. Das, G. Eadon, and J. Srinivasan. An Efficient SQL-Based RDF Querying Scheme. Proceedings of the 31st VLDB Conference, Trondheim, Norway. 2005. <a href="http://www.vldb2005.org/program/paper/fri/p1216-chong.pdf">(PDF)</a></p>
+
+<p>[CPS03] V. Christophides, D. Plexousakis, M. Scholl, and S. Tourtounis. On Labeling Schemes for the Semantic Web. In Proceedings of the Twelfth International World Wide Web Conference (WWW2003), Budapest, Hungary, 2003.
+
+<p>[RU95] R. Ramakrishnan and J. D. Ullman. A Survey of Research on Deductive Database Systems. <i>Journal of Logic Programming</i>, 23(2):126-149, May 1995.
+
+
+<p>[SSW94] K. Sagonas, T. Swift, and D.S. Warren. XSB as an Efficient Deductive Database Engine. In R.T. Snodgrass and M. Winslett, editors, <i>Proc. of the 1994 ACM SIGMOD Int. Conf. on Management of Data (SIGMOD'94)</i>, pp. 442-453,
+1994.
+
+<p>[STH97] K. Stoffel, M. Taylor, and J. Hendler. Efficient Management of Very Large Ontologies. In <i>Proc. of Fourteenth American Association for Artificial
+  Intelligence Conference (AAAI-97)</i>, AAAI/MIT Press, Menlo Park, CA, 1997. 
+
+
+
+
+<a name="align">
+<h2>Ontology Merging and Alignment</h2>
+
+<a name="se05">
+<p>[SE05] Pavel Shvaiko, Jérôme Euzenat. A Survey of Schema-Based Matching Approaches. Journal on Data Semantics IV: 146-171 (2005). <a href="http://www.dit.unitn.it/~p2p/RelatedWork/Matching/JoDS-IV-2005_SurveyMatching-SE.pdf">(PDF)</a>
+
+<a name="dmd02">
+<p>[DMD02] A. Doan, J. Madhavan, P. Domingos, and A. Halevy. Learning to Map between Ontologies on the Semantic Web. In <i>Proceedings of the Eleventh International World Wide Web Conference (WWW2002)</i>, Honolulu, Hawaii, 2002. <a href="http://www.cs.washington.edu/homes/alon/site/files/glue.pdf">(PDF)</a>
+
+Octavian Udrea, Lise Getoor, and Renée J. Miller. Leveraging Data and Structure in Ontology Integration. In SIGMOD, pages 449-460, 2007. <a href="http://www.cs.umd.edu/users/udrea/papers/iliads.pdf">(PDF)</a>
+
+Yuzhong Qu, Wei Hu, and Gong Cheng, Constructing Virtual Documents for Ontology Matching, WWW 2006. <a href="http://www2006.org/programme/files/pdf/4009.pdf">(PDF)</a>
+
+<p>J. Euzenat, H. Stuckenschmidt, M. Yatskevich. Introduction to the Ontology Alignment Evaluation 2005. K-Cap Workshop on Integrating Ontologies <a href="http://ftp.informatik.rwth-aachen.de/Publications/CEUR-WS/Vol-156/paper10.pdf">(PDF)</a>
+
+<p>Madhavan, J., P. A. Bernstein, and E. Rahm, Generic Schema Matching Using Cupid. In Proc. VLDB 2001. <a href="http://research.microsoft.com/~philbe/CupidVLDB01.pdf">(PDF)</a>
+
+<a name="nm01b">
+<p>[NM01b] N. F. Noy and M. A. Musen. Anchor-PROMPT: Using Non-Local Context for Semantic Matching. Workshop on Ontologies and Information Sharing at the Seventeenth International Joint Conference on Artificial Intelligence (IJCAI-2001), Seattle, WA, . 2001. <a href="http://citeseer.ist.psu.edu/rd/83848012%2C530600%2C1%2C0.25%2CDownload/http://citeseer.ist.psu.edu/cache/papers/cs/26268/http:zSzzSzwww-smi.stanford.eduzSzpubszSzSMI_ReportszSzSMI-2001-0889.pdf/anchor-prompt.pdf">(PDF)</a></p>
+
+<p>[MFR00] D. McGuinness, R. Fikes, J. Rice, and S. Wilder. An Environment for Merging and Testing Large Ontologies. In <i>Proceedings of the Seventh International Conference on Principles of Knowledge Representation and Reasoning (KR2000)</i>, Breckenridge, Colorado, April 2000.
+
+<p>[NM00] N. Noy and M. Musen. PROMPT: Algorithm and Tool for Automated Ontology Merging and Alignment. In <i>Proceedings of the Seventeenth National Conference on Artificial Intelligence (AAAI-2000)</i>, 2000.
+
+<p>[SD02] M. Sintek and S. Decker. TRIPLE - A Query, Inference and Transformation Language for the Semantic Web. In <i>Proc. of First International Semantic Web Conference</i>, 2002.
+
+<p>[Cha00] H. Chalupsky. OntoMorph: A Translation System for Symbolic Knowledge. In <i>Principles of Knowledge Representation and Reasoning: Proceedings of the Seventh International Conference (KR2000)</i>, San Francisco, CA, 2000. Morgan Kaufmann.
+
+<p>[MBS01] D. McDermott, M. Burstein, and D. Smith. Overcoming Ontology Mismatches in Transactions with Self-Describing Service Agents. In <i>First International Semantic Web Working Symposium (SWWS'01)</i>, 2001.
+
+
+
+
+<a name="integration">
+
+<h2>Information Integration</h2>
+<a name="qdh08">
+<p>[QDH08] A. Qasem, D. A. Dimitrov, and J. Heflin. Efficient Selection and Integration of Data Sources for Answering Semantic Web Queries . In ICSC 08: Proceedings of the Second IEEE International Conference on Semantic Computing. IEEE Computer Society Press, 2008. pp. 245-252. <a href="http://swat.cse.lehigh.edu/pubs/qasem08b.pdf">(PDF)</a></p>
+
+<a name="his03">
+<p>[HIS03] Alon Y. Halevy, Zachary G. Ives, Dan Suciu, Igor Tatarinov. Schema Mediation in Peer Data Management Systems. In Proceedings of ICDE, 2003. <a href="http://www.cs.washington.edu/homes/alon/files/icde03.pdf">(PDF)</a></p>
+
+<a name="acg05">
+<p>[ACG05] Philippe Adjiman, Philippe Chatalic, Francois Goasdoué, Marie-Christine Rousset, Laurent Simon. Somewhere in the Semantic Web. <i>Proceedings of PPSWR 2005 (International Workshop on Principles and Practice of Semantic Web Reasoning)</i>, 2005. <a href="http://www-lsr.imag.fr/Les.Personnes/Marie-Christine.Rousset/publis/GemoReport-400.pdf">(PDF)</a></p>
+
+<a name="sbt05">
+<p>[SBT05] Luciano Serafini, Alex Borgida, and Andrei Tamilin. Aspects of Distributed and Modular Ontology Reasoning. IJCAI-05, pp. 570-575, 2005. Also available as: ITC-IRST Technical Report No T05-02-03. <a href="http://sra.itc.it/people/serafini/distribution/ddl-ijcai-05-techrep.pdf">(PDF)</a></p>
+
+<a name="bsh07">
+<p>[BSH07] Bao, J., Slutzki, G., and Honavar, V. A Semantic Importing Approach to Knowledge Reuse from Multiple Ontologies.. In: Proceedings of the 22nd Conference on Artificial Intelligence (AAAI-2007). Vancouver, Canada. Semantic Importing Approach to Knowledge Reuse from Multiple Ontologies. pp. 1304-1309. AAAI Press. 2007. <a href="http://www.cs.iastate.edu/~honavar/Papers/AAAI07BaoJ.pdf">(PDF)</a></p>
+
+<p>[BGvH03] P. Bouquet, F. Giunchiglia, F. van Harmelen, L. Serafini, and H. Stuckenschmidt. C-OWL: Contextualizing ontologies, In Dieter Fensel, Katia Sycara, and John Mylopoulos, editors, <i>Proc. of the 2003 International Semantic Web Conference (ISWC 2003)</i>, number 2870 in Lecture Notes in Computer Science, pages 164-179. Springer, 2003.
+
+
+<p>[HIM03] A. Halevy, Z. Ives, P. Mork, and I. Tatarinov. Piazza: Data Management Infrastructure for Semantic Web Applications. In Proceedings of the Twelfth International World Wide Web Conference (WWW2003), Budapest, Hungary, 2003.
+<!-- more focus on XML -->
+
+<p>[SVH04] H. Stuckenschmidt, R. Vdovjak, G.-J. Houben, J. Broekstra. Index Structures and Algorithms for Querying Distributed RDF Repositories. WWW 2004. pp. 631-639. 
+
+<p>[GPS04] Bernardo Cuenca Grau, Bijan Parsia, Evren Sirin. Working with Multiple Ontologies on the Semantic Web. ISWC 2004.
+
+
+<p>[GPQ97] H. Garcia-Molina, Y. Papakonstantinou, D. Quass, A. Rajaraman, Y. Sagiv, J.D. Ullman, V. Vassalos, and J. Widom. The TSIMMIS Approach to Mediation: Data Models and Languages. <i>Journal of Intelligent Information Systems</i>, 8(2):117-132, 1997.
+
+<p>[KMA01] C. Knoblock, S. Minton, J. L. Ambite, N. Ashish, I. Muslea, A. G. Philpot, and S. Tejada. The Ariadne Approach to Web-based Information Integration. To appear in the International the Journal on Cooperative Information Systems (IJCIS) Special Issue on Intelligent Information Agents: Theory and Applications, 10(1/2), pp. 145-169, 2001.
+
+
+<p>[Wie94] G. Wiederhold. Interoperation, Mediation, and Ontologies. In <i>Workshop on Heterogeneous Cooperative Knowledge-Bases</i>, pp. 33-48, Tokyo, Japan, 1994.
+
+<p>[CGL01] D. Calvanese, G. De Giacomo, and M. Lenzerini. A Framework for Ontology Integration. In <i>First International Semantic Web Working Symposium (SWWS'01)</i>, 2001.
+
+
+<a name="services">
+<h2>Semantic Web Services</h2>
+<p>[KSN04] Ugur Kuter, Evren Sirin, Dana Nau, Bijan Parsia, James Hendler. Information Gathering During Planning for Web Service Composition. ISWC 2004.
+
+<p>[SPA04] Sycara, Katia; Paolucci, Massimo, Ankolekar, Anupriya; Srinivasan, Naveen. Automated Discovery, Interaction and Composition of Semantic Web Services. Web Semantics 1(1):27-46. 2004. <a href="http://www.websemanticsjournal.org/ps/pub/showDoc.Fulltext/document.pdf?lang=en&doc=2004-5&format=pdf&compression=">(PDF)</a></p>
+
+<p>[MS02] McIlraith and Son. Adapting Golog for Composition of Semantic Web Services. Proc. of 8th Intl. Conf. on KR&R, 2002.
+
+<p>[SS04] Sreenath, Raghuram M.; Singh, Munindar P. Agent-Based Service Selection. Web Semantics 1(3) :261-279. 2004.
+
+<p>[WPS03] D. Wu, B. Parsia, E. Sirin, J. Hendler, and D. Nau. Automating DAML-S Web Services Composition Using SHOP2. In Dieter Fensel, Katia Sycara, and John Mylopoulos, editors, <i>Proc. of the 2003 International Semantic Web Conference (ISWC 2003)</i>, number 2870 in Lecture Notes in Computer Science, pp. 195-210. Springer, 2003. <a href="http://www.mindswap.org/papers/ISWC03-SHOP2.pdf">(PDF)</a></p>
+
+<p>[TBG01] D. Trastour, C. Bartolini, and J. Gonzalez-Castillo. A Semantic Web Approach to Service Description for Matchmaking of Services. In <i>First International Semantic Web Working Symposium (SWWS'01)</i>, 2001.
+
+
+<p>[ABH01] A. Ankolekar, M. Burstein, J. Hobbs, O. Lassila, D. Martin, S. McIlraith, S. Narayanan, M. Paolucci, T. Payne, K. Sycara, and H. Zeng. DAML-S: Semantic Markup for Web Services. In <i>First International Semantic Web Working Symposium (SWWS'01)</i>, 2001.
+
+
+<p>[NM02] S. Narayanan, S. McIlraith (2002). Simulation, Verification and Automated Composition of Web Services, <i>Eleventh International World Wide Web Conference (WWW2002)</i>, Honolulu,May 7-10.
+
+
+
+<a name="ui">
+<h2>User Interfaces</h2>
+<a name="rvoh05">
+<p>[RvOH05] L. Rutledge, J. van Ossenbruggen, and L. Hardman. Making RDF Presentable: Integrated Global and Local Semantic Web Browsing. WWW 2005, pp. 199-206. 2005. <a href="http://www2005.org/cdrom/docs/p199.pdf">(PDF)</a></p>
+
+<a name="kew01">
+<p>[KEW01] C. Kwok, O. Etzioni, and D. Weld. Scaling Question Answering to the Web. In <i>Proc. of WWW10</i>. 2001, pp. 150-161. <a href="http://www10.org/cdrom/papers/pdf/p120.pdf">(PDF)</a></p>
+
+<a name="lmu06">
+<p>[LMU06] Lopez, Vanessa; Motta, Enrico and Uren, Victoria. PowerAqua: Fishing the Semantic Web. European Sematic Web Conference, Montenegro, 2006. <a href="http://eprints.aktors.org/457/01/PowerAqua_eswcfinal.pdf">(PDF)</a></p>
+
+<p>[LPM05] V. Lopez, M. Pasin, and E. Motta. AquaLog: An Ontology-Portable Question Answering System for the Semantic Web. ESWC 2005.
+
+<p>[QK04] D. Quan, D. R. Karger. How to Make a Semantic Web Browser. WWW 2004. pp 255-265.
+
+
+
+<a name="apps">
+<h2>Applications</h2>
+
+<p>Anupriya Ankolekar, Markus Krötzsch, Thanh Tran, and Denny Vrandecic. The Two Cultures: Mashing Up Web 2.0 and the Semantic Web (position paper). WWW 2007. <a href="http://www2007.org/papers/paper777.pdf">(PDF)</a></p>
+
+<p>[VKV06] Max Völkel, Markus Krötzsch, Denny Vrandecic, Heiko Haller, and Rudi Studer. Semantic Wikipedia. WWW 2006. <a href="http://www2006.org/programme/files/pdf/4039.pdf">(PDF)</a></p>
+
+<a name="ssg04">
+<p>[SSG04] m.c. schraefel, N. R. Shadbolt, N. Gibbins, H. Glaser, S. Harris. CS AKTive Space: Representing Computer Science in the Semantic Web. WWW 2004. pp. 384-392. <a href="http://www2004.org/proceedings/docs/1p384.pdf">(PDF)</a></p>
+
+<a name="gs04">
+<p>[GS04] Gandon, Fabien L.; Sadeh, Norman M. Semantic Web Technologies to Reconcile Privacy and Context Awareness. <i>Web Semantics</i> 1(3), 2004, pp. 241-260.
+
+<p>[HBE04] Peter Haase, Jeen Broekstra, Marc Ehrig, Maarten Menken, Peter Mika, Michal Plechawski, Pawel Pyszlak, Bjorn Schnizler, Ronny Siebes, Steffen Staab, Christoph Tempich. Bibster - A Semantics-Based Bibliographic Peer-to-Peer System. ISWC 2004. pp. 122-136
+
+<p>[MBH04] T. Miles-Board, C. Bailey, W. Hall, L. Carr. Building a Companion Website in the Semantic Web. WWW 2004. pp. 365-373.
+<!-- disucsses how to create a companion web site to a book -->
+
+<p>[HMS05] Hyv&yacute;onen, Eero; M&yacute;akel&yacute;a, Eetu; Salminen, Mirva; Valo, Arttu; Viljanen, Kim; Saarela, Samppa; Junnila, Miikka; Kettula, Suvi. MUSEUMFINLAND - Finnish Museums on the SemanticWeb. Web Semantics 3(2-3). 2005.
+
+
+<p>[DDM03] M. Dzbor, J. Domingue, and E. Motta. Magpie - Toward a Semantic Web Browser. In Dieter Fensel, Katia Sycara, and John Mylopoulos, editors, <i>Proc. of the 2003 International Semantic Web Conference (ISWC 2003)</i>, number 2870 in Lecture Notes in Computer Science, pages 690-705. Springer, 2003.
+
+
+<p>[CFJ01] R. Cost, T. Finin, A. Joshi, Y. Peng, C. Nicholas, I. Soboroff, H. Chen, L. Kagal, F. Perich, Y. Zou, and S. Tolia. ITTALKS: A Case Study in the Semantic Web and DAML. In <i>First International Semantic Web Working Symposium (SWWS'01)</i>, 2001.
+
+<p>[MEG03] L. McDowell, O. Etzioni, S. Gribble, A. Halevy, H. Levy, W. Pentney, D. Verma, and S. Vlasseva. Mangrove: Enticing Ordinary People onto the Semantic Web via Instant Gratification. In Dieter Fensel, Katia Sycara, and John Mylopoulos, editors, <i>Proc. of the 2003 International Semantic Web Conference (ISWC 2003)</i>, number 2870 in Lecture Notes in Computer Science, pages 754-770. Springer, 2003.
+
+<p>[TGB01] M. Tallis, N. Goldman, and R. Balzer. The Briefing Associate: A Role for COTS Applications in the Semantic Web. In <i>First International Semantic Web Working Symposium (SWWS'01)</i>, 2001.
+
+<p>[CGK01] H. Chalupsky, Y. Gil, C.A. Knoblock, K. Lerman, J. Oh, D.V. Pynadath, T.A. Russ, and M. Tambe. Electric Elves: Applying Agent Technology to Support Human Organizations. In <i>Proceedings of the Thirteenth Innovative Applications of Artificial Intelligence Conference (IAAI-01)</i>, Menlo Park, 2001. AAAI Press. 
+<p>[JDW01] Y. Jin, S. Decker, and G. Widerhold. OntoWebber: Model-Driven Ontology-Based Web Site Management. In <i>First International Semantic Web Working Symposium (SWWS'01)</i>, 2001.
+
+
+
+
+<a name="langs">
+<h2>Alternative/Historical Semantic Web Languages</h2>
+
+<p>[HH01] J. Heflin and J. Hendler. A Portrait of the Semantic Web in Action. <i>IEEE Intelligent Systems</i>, 16(2):54-59, 2001.
+
+<p>[HH00] J. Heflin and J. Hendler. Semantic Interoperability on the Web. In <I>Proceedings of Extreme Markup Languages 2000</i>. Graphic Communications Association, Alexandria, VA, 2000. pp. 111-120.
+
+<p>[BKD00] J. Broekstra, M. Klein, S. Decker, D. Fensel, and I. Horrocks. Adding Formal Semantics to the Web: Building on Top of RDF Schema. In <i>Proceedings of the ECDL 2000 Workshop on the Semantic Web</i>, 2000. 
+
+<p>[DEF00] S. Decker, M. Erdmann, D. Fensel, and R. Studer. Ontobroker: Ontology Based Access to Distributed and Semi-structured Information. In <i>Semantic Issues in Multimedia Systems. Proceedings of DS-8</i>, Kluwer Academic Publisher, Boston, 1999. pp. 351--369.
+
+<p>[FHvH00] D. Fensel, I. Horrocks, F. van Harmelen, S. Decker, M. Erdmann, and M. Klein. OIL in a Nutshell. In <i>Knowledge Acquisition, Modeling, and Management, Proceedings of the European Knowledge Acquisition Conference (EKAW-2000),</i> Springer-Verlag, Berlin, 2000. pp. 1-16.
+
+
+<p>[vHP01a] F. van Harmelen, Peter Patel-Scheider, and I. Horrocks. <i>Annotated DAML+OIL (March 2001) Ontology Markup.</i> Joint US-EU Ad Hoc Agent Markup Languages Committee, March 2001. <a href="http://www.daml.org/2001/03/daml+oil-walkthru.html">(HTML)</a>.</p>
+
+<p>[vHP01b] F. van Harmelen, Peter Patel-Scheider, and I. Horrocks. <i>Reference Description of the DAML+OIL (March 2001) Ontology Markup Language.</i> Joint US-EU Ad Hoc Agent Markup Languages Committee, March 2001. <a href="http://www.daml.org/2001/03/reference.html">(HTML)</a>.</p>
+
+<p>[dBP05] J. de Bruijn, A. Polleres, R. Lara, D. Fensel. OWL DL vs. OWL Flight: Conceptual Modeling and Reasoning for the Semantic Web. WWW 2005. <a href="http://www2005.org/cdrom/docs/p623.pdf">(PDF)</a></p>
+
+<p>Boris Motik, Ian Horrocks, and Ulrike Sattler. Bridging the Gap Between OWL and Relational Databases. WWW 2007. <a href="http://www2007.org/papers/paper067.pdf">(PDF)</a></p>
+
+<p>Diego Calvanese, Giuseepe De Giacomo, Domenico Lembo, Maurizio Lenerini, and Riccardo Rosati. Data Complexity of Query Answering in Description Logics. Proceedings of the Tenth International Conference on Principles of Knowledge Representation and Reasoning (KR 2006), pages 260-270, 2006. <a href="http://www.dis.uniroma1.it/~rosati/publications/Calvanese-etal-KR-06.pdf">(PDF)</a></p>
+
+<a name="specs">
+<h2>Language Specifications</h2>
+
+<p>[BPS06a] T. Bray, J. Paoli, C.M. Sperberg-McQueen, E. Maler and F. Yergeau, eds. <i>Extensible Markup Language (XML) 1.0 (Fourth Edition).</i> World Wide Web Consortium, August 16, 2006. <a href="http://www.w3.org/TR/xml">(HTML)</a>.</p>
+
+<p>[BPS06b] T. Bray, J. Paoli, C.M. Sperberg-McQueen, E. Maler, F. Yergeau, F. Yegreau, and J. Cowan. <i>Extensible Markup Language (XML) 1.1 (Second Edition).</i> World Wide Web Consortium, August 16, 2006. <a href="http://www.w3.org/TR/xml11">(HTML)</a>.</p>
+
+<p>[BHL06] T. Bray, D. Hollander, A. Layman, and R. Tobin. <i>Namespaces in XML 1.0 (Second Edition)</i>, W3C Recommendation. World Wide Web Consortium, August 16, 2006. <a href="http://www.w3.org/TR/xml-names">(HTML)</a>.</p>
+
+<p>[FW01] D. Fallside, P. Walmsley (eds.). <i>XML Schema Part 0: Primer Second Edition</i>, W3C Recommendation. World Wide Web Consortium, Oct. 28, 2004. <a href="http://www.w3.org/TR/xmlschema-0/">(HTML)</a>.</p>
+
+<p>[Cla99] J. Clark. <i>XSL Transformations (XSLT) Version 1.0</i>, W3C Recommendation. World Wide Web Consortium, November 16, 1999. <a href="http://www.w3.org/TR/1999/REC-xslt-19991116">(HTML)</a>.</p>
+
+<p>[Bec04] Dave Beckett, ed. <i>RDF/XML Syntax Specification (Revised)</i>, W3C Recommendation. World Wide Web Consortium, February 10, 2004. <a href="http://www.w3.org/TR/rdf-syntax-grammar/">(HTML)</a>.
+
+<p>[MM04] F. Manola and E. Miller, eds. <i>RDF Primer</i>, W3C Recommendation. World Wide Web Consortium, February 10, 2004. <a href="http://www.w3.org/TR/rdf-primer/">(HTML)</a>.
+
+
+<p>[BG04] D. Brickley and R.V. Guha, eds. <i>RDF Vocabulary Description Language 1.0: RDF Schema.</i>, W3C Recommendation. World Wide Web Consortium, February 10, 2004. <a href="http://www.w3.org/TR/rdf-schema/">(HTML)</a>.
+
+<p>[PS08] Eric Prud'hommeaux and Andy Seaborne, eds. <i>SPARQL Query Language for RDF</i>, W3C Recommendation. World Wide Web Consortium, January 15, 2008. <a href="http://www.w3.org/TR/rdf-sparql-query/">(HTML)</a>.
+
+<p>[SWM04] M. Smith, C. Welty, D. McGuinness. <i>OWL Web Ontology Language Guide</i>, W3C Recommendation. World Wide Web Consortium, February 10, 2004. <a href="http://www.w3.org/TR/owl-guide/">(HTML)</a>.</p>
+
+
+
+<a name="tutorials">
+<h2>Tutorials</h2>
+
+<a name="ckr97">
+<p>[CKR97] D. Connolly, R. Khare, and A. Rifkin. The Evolution of Web Documents: The Ascent of XML. <i>World Wide Web Journal Special Issue on XML</i> 2(4):119-128, Fall 1997.</p>
+
+<a name="wal98">
+<p>[Wal98] N. Walsh. <i>A Technical Introduction XML.</i> O'Reilly XML.com, October 3, 1998. <a href="http://www.xml.com/pub/a/98/10/guide0.html">(HTML)</a>.</p>
+
+<a name="bou00">
+<p>[Bou00] R. Bourret. <i>Namespace Myths Exploded.</i> O'Reilly XML.com, March 8, 2000. <a href="http://www.xml.com/pub/a/2000/03/08/namespaces/index.html">(HTML)</a>.</p>
+
+<a name="bra99">
+<p>[Bra99] T. Bray. <i>XML Namespaces by Example.</i> O'Reilly XML.com, January 19,1999. <a href="http://www.xml.com/pub/a/1999/01/namespaces.html">(HTML)</a>.</p>
+
+
+<p>[Hol00] G. K. Holman. <i>What is XSLT?</i> O'Reilly XML.com, August 16, 2000. <a href="http://www.xml.com/pub/a/2000/08/holman/s1.html">(HTML)</a></p>.
+
+
+  
+  <!-- InstanceEndEditable -->
+      <p>
+      <div id="footer" class="donotprint">
+  <div><a href="index.html">CMSC 491/691 Knowledge Graphs&mdash;Fall 2019</a></div>
+        <a href="http://www.cs.umbc.edu/">CSEE</a> |
+		  <a href="http://www.umbc.edu/">UMBC</a></div></p> </td> 
+  </tr>
+</table></body><!-- InstanceEnd --></html>
+

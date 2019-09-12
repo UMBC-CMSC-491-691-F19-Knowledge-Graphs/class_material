@@ -1,0 +1,47 @@
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix vocab:   <file:///Users/finin/Sites/691f16/examples/d2rq/vocab/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix map:     <file:///Users/finin/Sites/691f16/examples/d2rq/lab.ttl#> .
+@prefix db:      <file:///Users/finin/Sites/691f16/examples/d2rq/lab.ttl> .
+
+vocab:people_Name
+      a       rdf:Property ;
+      rdfs:label "people Name" .
+
+<file:///Users/finin/Sites/691f16/examples/d2rq/lab.ttl#people/Al_Turing>
+      a       vocab:people ;
+      rdfs:label "people #Al Turing" ;
+      vocab:people_Age 32 ;
+      vocab:people_Mobile "443-253-3863" ;
+      vocab:people_Name "Al Turing" .
+
+<file:///Users/finin/Sites/691f16/examples/d2rq/lab.ttl#people/Don_Knuth>
+      a       vocab:people ;
+      rdfs:label "people #Don Knuth" ;
+      vocab:people_Age 25 ;
+      vocab:people_Mobile "410-228-6282" ;
+      vocab:people_Name "Don Knuth" .
+
+rdfs:label
+      a       rdf:Property .
+
+vocab:people_Mobile
+      a       rdf:Property ;
+      rdfs:label "people Mobile" .
+
+<file:///Users/finin/Sites/691f16/examples/d2rq/lab.ttl#people/Chuck_Babbage>
+      a       vocab:people ;
+      rdfs:label "people #Chuck Babbage" ;
+      vocab:people_Age 38 ;
+      vocab:people_Mobile "410-499-1282" ;
+      vocab:people_Name "Chuck Babbage" .
+
+vocab:people
+      a       rdfs:Class ;
+      rdfs:label "people" .
+
+vocab:people_Age
+      a       rdf:Property ;
+      rdfs:label "people Age" .

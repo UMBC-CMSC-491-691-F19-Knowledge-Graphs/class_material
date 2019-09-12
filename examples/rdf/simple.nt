@@ -1,0 +1,10 @@
+<unknown:namespace#john> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<unknown:namespace#john> <http://xmlns.com/foaf/0.1/gender> "Male" .
+<unknown:namespace#john> <http://xmlns.com/foaf/0.1/name> "John Smith" .
+<unknown:namespace#john> <http://xmlns.com/foaf/0.1/name> "Johnny Smith" .
+<unknown:namespace#john> <http://xmlns.com/foaf/0.1/knows> <unknown:namespace#mary> .
+_:node18h0p05bex1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:node18h0p05bex1 <http://xmlns.com/foaf/0.1/mbox> <mailto:mary.smith@gmail.com> .
+<unknown:namespace#john> <http://xmlns.com/foaf/0.1/knows> _:node18h0p05bex1 .
+<unknown:namespace#mary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<unknown:namespace#mary> <http://xmlns.com/foaf/0.1/name> "Mary Smith" .

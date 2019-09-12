@@ -1,0 +1,73 @@
+#Processed by Id: cwm.py,v 1.197 2007/12/13 15:38:39 syosi Exp 
+        #    using base file:///Users/finin/Sites/691s13/examples/n3/ex/ex4.ttl
+        
+#  Notation3 generation by
+#       notation3.py,v 1.200 2007/12/11 21:18:08 syosi Exp
+
+#   Base was: file:///Users/finin/Sites/691s13/examples/n3/ex/ex4.ttl
+    @prefix fam: <http://691.finin.org/o/family#> .
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+    @prefix log: <http://www.w3.org/2000/10/swap/log#> .
+    @prefix math: <http://www.w3.org/2000/10/swap/math#> .
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+    
+    rdf:type     a rdf:Property,
+                rdfs:Resource .
+    
+    <#cain>     a rdfs:Resource,
+                foaf:Person;
+         fam:has_parent <#eve> .
+    
+    <#eve>     a fam:Woman,
+                rdfs:Resource,
+                foaf:Person;
+         fam:mother_of <#cain>;
+         fam:parent_of <#cain> .
+    
+    fam:Woman     a rdfs:Resource .
+    
+    fam:has_parent     a rdf:Property,
+                rdfs:Resource;
+         rdfs:subPropertyOf fam:has_parent;
+         owl:equivalentProperty fam:has_parent;
+         owl:inverseOf fam:parent_of .
+    
+    fam:mother_of     a rdf:Property,
+                rdfs:Resource;
+         rdfs:domain fam:Woman;
+         rdfs:range foaf:Person;
+         rdfs:subPropertyOf fam:parent_of .
+    
+    fam:parent_of     a rdf:Property,
+                rdfs:Resource;
+         rdfs:domain foaf:Person;
+         rdfs:range foaf:Person;
+         rdfs:subPropertyOf fam:parent_of;
+         owl:equivalentProperty fam:parent_of;
+         owl:inverseOf fam:has_parent .
+    
+    rdf:Property     a rdfs:Resource .
+    
+    rdfs:Resource     a rdfs:Resource .
+    
+    rdfs:domain     a rdf:Property,
+                rdfs:Resource .
+    
+    rdfs:range     a rdf:Property,
+                rdfs:Resource .
+    
+    rdfs:subPropertyOf     a rdf:Property,
+                rdfs:Resource .
+    
+    owl:equivalentProperty     a rdf:Property,
+                rdfs:Resource .
+    
+    owl:inverseOf     a rdf:Property,
+                rdfs:Resource .
+    
+    foaf:Person     a rdfs:Resource .
+    
+#ENDS

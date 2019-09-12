@@ -1,0 +1,10 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix bib: <http://daml.umbc.edu/ontologies/bib/> .
+
+<http://umbc.edu/~finin/talks/idm02/> dc:title "Intelligent Information Systems on the Web" ;
+	dc:creator _:node17i6o0s07x1 .
+
+_:node17i6o0s07x1 bib:Name "Tim Finin" ;
+	bib:Email "finin@umbc.edu" ;
+	bib:Aff <http://umbc.edu/> .

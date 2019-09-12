@@ -1,0 +1,62 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix : <#> .
+
+# mammals are animals
+:mammal rdfs:subClassOf :animal.
+
+#dogs are mammals
+:dog rdfs:subClassOf :mammal.
+
+# rabies is a disease
+:rabies a :disease.
+
+# a sickAnimal is *defined* as anything which is both an animal
+# and something that has at least one disease.
+
+:SickAnimal owl:equivalentClass
+ [ a owl:Class;
+   owl:intersectionOf 
+     ( :animal 
+       [a owl:Restriction;
+         owl:OnProperty :hasDisease;
+         owl:minCardinality 1])].
+
+
+# a rabidDog is *defined* as anything which is both a dog
+# and something that has rabies.
+
+:rabidDog owl:equivalentClass
+ [ a owl:Class;
+   owl:intersectionOf 
+     ( :dog
+       [a owl:Restriction;
+         owl:OnProperty :hasDisease;
+         owl:hasValue :rabies])].
+
+
+# a rabidAnimal is *defined* as anything which is both an animal
+# and something that has rabies.
+
+:rabidAnimal owl:equivalentClass
+ [ a owl:Class;
+   owl:intersectionOf 
+     ( :animal
+       [a owl:Restriction;
+         owl:OnProperty :hasDisease;
+         owl:hasValue :rabies])].
+
+# dangerDogs are dogs and they also have rabies.  note: these are
+# neccessary p[roperties.  All dangerDogs are dogs and all also have
+# rabies.  However, it's not a comp[lete definition -- not all dogs
+# with rabies are dangerDogs.
+
+:dangerDogs rdfs:subClassof :dog;
+  rdfs:subClassOf
+    [a owl:Restriction;
+       owl:OnProperty :hasDisease;
+       owl:hasValue :rabies])].
+
+
+
+

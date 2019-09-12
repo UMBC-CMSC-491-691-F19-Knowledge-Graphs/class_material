@@ -1,0 +1,54 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "schema:Course",
+  "courseCode": "CMSC 491/691 Section 07",
+  "name": "Special topics in Computer Science: Knowledge Graphs",
+  "description": "The course will introduce the notion of the Semantic Web, provide an overview of the underlying theory and technology, cover existing tools and practices, and highlight current and potential applications.",
+  "schema:provider": {
+    "@type": "schema:CollegeOrUniversity",
+    "schema:name": "University of Maryland, Baltimore County",
+    "schema:url": "https://umbc.edu/"
+  },
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "in person",
+	"name": "Special topics in Computer Science: Knowledge Graphs",
+	"description": "The special topics course will introduce the notion of the Semantic Web, provide an overview of the underlying theory and technology, cover existing tools and practices, and highlight current and potential applications.",
+	"instructor": {
+      "@type": "Person",
+      "@id": "http://umbc.edu/~finin",
+      "name": "Tim Finin",
+      "jobTitle": [
+        "Willard and Lillian Hackerman Chair in Engineering",
+        "Professor"
+        ],
+	  "sameAs": ["https://umbc.edu/~finin",
+		           "https://m.wikidata.org/wiki/Q7803487",
+                   "https://en.wikipedia.org/wiki/Tim_Finin"],
+     "affiliation": {
+       "@id": "http://umbc.edu/",
+       "@type": "EducationalOrganization",
+       "name": "University of Maryland, Baltimore County",
+       "url": "http://umbc.edu/",
+       "department": "http://www.csee.umbc.edu",
+       "address": {
+         "@id": "_:umbcAddress",
+         "@type": "PostalAddress",
+         "streetAddress": "1000 Hilltop Circle",
+         "addressLocality": "Baltimore",
+         "addressRegion": "Maryland",
+         "addressCountry": "United States"
+       }
+     }
+   }, 
+   "location": {
+		 "@type": "Place",
+		 "name": "University of Maryland, Baltimore County",
+		 "address": "FA 306, UMBC, 1000 Hilltop Circle, Baltimore MD 21250"
+		 },
+    "endDate": "2019-12-10",
+    "startDate": "2019-08-28"
+  }
+}
+</script>

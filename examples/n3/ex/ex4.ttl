@@ -1,0 +1,19 @@
+@prefix : <#> .
+@prefix fam: <http://691.finin.org/o/family#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+fam:mother_of 
+    rdfs:domain fam:Woman;
+    rdfs:range foaf:Person;
+    rdfs:subPropertyOf fam:parent_of .
+
+fam:parent_of 
+    rdfs:domain foaf:Person;
+    rdfs:range foaf:Person.
+
+fam:has_parent 
+    owl:inverseOf fam:parent_of.
+
+:eve fam:mother_of :cain.

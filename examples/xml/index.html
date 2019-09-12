@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/691.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="shortcut icon" href="images/kg_favicon.ico">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>UMBC CMSC 491/691 A Web of Data</title>
+<!-- InstanceEndEditable -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-72855529-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<style type="text/css">
+<!--
+body {
+	background-color: #DBDBDB;
+}
+.boldlinks {A {text-decoration: none;color:white}
+.boldlinks  A:hover {font-weight:bold;}
+-->
+</style>
+<link href="../../691.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style17 {color: #FFFFFF}
+.style18 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+}
+.style20 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+}
+.style2 {
+	font-size: large;
+
+	font-weight: bold;
+}
+.style4 {font-size: 24px}
+.style5 {font-size: 32px}
+.imgresize{
+    width:100%;
+}
+.imgtag{
+    width:100%;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+.style17 {color: #FFFFFF}
+.style18 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+}
+.style20 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body>
+<table width="90%" border="0" align="center" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+  <tr>
+    <td><table width="100%" border="0" align="center" cellspacing="0" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+        <tr>
+			<td width="10%" bordercolor="#E8E8E8" bgcolor="#99CCFF" id="header"><img src="../../images/kg2.png" style="display:block; width:100%; height:auto;" alt=""></td>
+			<td width="90%" bordercolor="#E8E8E8" bgcolor="#99CCFF" id="header2"><div align="center">            
+            <p><span class="style18">UMBC CMSC 491/691 (07) Fall 2019</span><br/>
+            <span class="style20">Knowledge Graphs</span></p>
+          </div></td>
+        </tr>
+        <tr>
+          <td colspan="3" bgcolor="#000000">
+            <div id="nav"><span class="style17"><a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/index.html">Home</a> &middot;<a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/syllabus.html"> Syllabus</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/schedule.html">Schedule</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/hw">HW</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/exams">Exams</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/notes">Notes</a> &middot; <a href="https://github.com/UMBC-CMSC-491-691-F19-Knowledge-Graphs/">GitHub</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/examples">Examples</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/resources.html">Resources</a> &middot; <a href="https://blackboard.umbc.edu/ultra/courses/_49846_1/cl/outline">Blackboard</a> &middot;<a href="https://piazza.com/umbc/fall2019/cmsc491691section07/home"> Piazza</a></span></div>         </td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td width="100%" bordercolor="#EAEAEA" bgcolor="#FFFFFF" id="content"><!-- InstanceBeginEditable name="BODY" -->
+    <div class="imgresize"><img src="../../images/home_computer.png" class="imgtag"/></div>
+      <h1 align="center">XML Examples </h1>
+      <p>This <a href="../xml">directory</a> contains examples of XML files. Some have schemas defined as DTD or XLD files. Some have style sheets specified by XLS files.</p>
+      <ul>
+        <li><a href="periodicTable">Periodic elements</a> has a simple xml file, <a href="periodicTable/allelements.xml">allelements.xml</a> (<a href="periodicTable/allelements.xml.txt">txt</a>), with no associated schema. The xml file can be checked with a simple validaor to see if it is well-formed XML.</li>
+        <li>The <a href="book">book</a> example represents data about books and has a simple DTD schema (<a href="book/book.dtd">book.dtd</a>). Note that since the <a href="book/book.xml">book.xml</a> (<a href="book/book.xml.txt">txt</a>) file references the <a href="book/book.dtd">dtd schema</a>, the validator uses it to check if it conforms.</li>
+        <li>In the company example, <a href="company/company-data.xml">company-data.xml</a> (<a href="company/company-data.xml.txt">txt</a>) also references a DTD schema, <a href="company/company.dtd">company.dtd</a>, supporting validation.</li>
+        <li><a href="cdcatalog">cdcatalog</a> is an example that motivates the use of XML with style sheets. The native html version, <a href="cdcatalog/cdcatalog.html">cdcatalog.html</a> (<a href="cdcatalog/cdcatalog.html.txt">src</a>) , just uses html to display a list of CDs. The file <a href="cdcatalog/cdcatalog.xml">cdcatalog.xml</a> (<a href="cdcatalog/cdcatalog.xml.txt">src</a>) uses xml to represent the data and the style sheet <a href="cdcatalog/cdcatalog.xsl">cdcatalog.xsl</a> (<a href="cdcatalog/cdcatalog.xsl.txt">src</a>) to transform it into html.</li>
+        <li>The <a href="food">food</a> example has a data file and a style sheet but no schema.
+          <ul>
+            <li> <a href="food/simple.xml">simple.xml</a>: xml data with the XSL declaration </li>
+            <li> <a href="food/simple.xsl">simple.xsl</a>: the XSL transform </li>
+            <li> <a href="food/simpleNoXSL.xml">simpleNoXSL.xml:</a> xml data without the XSL declaration </li>
+          </ul>
+          View the two xml files in your browser to see the effect of the xsl style sheet.
+        </li>
+        <li><a href="expenseReport">ExpenseReport</a> gives an example of a for expense reports, where
+          <ul>
+            <li> <a href="expenseReport/expensesNoXSL.xml">expensesNoXSL.xml</a> is the raw data, i.e., the style sheet has been
+              commented out </li>
+            <li> <a href="expenseReport/expenses.xml">expenses.xml </a>is the raw data <b>with</b> the style sheet </li>
+            <li><a href="expenseReport/ExpReport.xsd"> ExpReport.xsd</a> is the XML schema file </li>
+            <li> <a href="expenseReport/ExpReport.xsl">ExpReport.xsl</a> is the XSL tranform file </li>
+          </ul>
+        </li>
+      </ul>
+    <!-- InstanceEndEditable -->
+      <p>
+      <div id="footer" class="donotprint">
+  <div><a href="index.html">CMSC 491/691 Knowledge Graphs&mdash;Fall 2019</a></div>
+        <a href="http://www.cs.umbc.edu/">CSEE</a> |
+		  <a href="http://www.umbc.edu/">UMBC</a></div></p> </td> 
+  </tr>
+</table></body><!-- InstanceEnd --></html>
+

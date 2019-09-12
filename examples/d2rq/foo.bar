@@ -1,0 +1,49 @@
+@prefix map: <#> .
+@prefix db: <> .
+@prefix vocab: <vocab/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix jdbc: <http://d2rq.org/terms/jdbc/> .
+
+map:database a d2rq:Database;
+	d2rq:jdbcDriver "com.mysql.jdbc.Driver";
+	d2rq:jdbcDSN "jdbc:mysql://127.0.0.1/lab";
+	d2rq:username "demo";
+	jdbc:autoReconnect "true";
+	jdbc:zeroDateTimeBehavior "convertToNull";
+	.
+
+# Table people
+map:people a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "people/@@people.Name|urlify@@";
+	d2rq:class vocab:people;
+	d2rq:classDefinitionLabel "people";
+	.
+map:people__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:people;
+	d2rq:property rdfs:label;
+	d2rq:pattern "people #@@people.Name@@";
+	.
+map:people_Name a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:people;
+	d2rq:property vocab:people_Name;
+	d2rq:propertyDefinitionLabel "people Name";
+	d2rq:column "people.Name";
+	.
+map:people_Age a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:people;
+	d2rq:property vocab:people_Age;
+	d2rq:propertyDefinitionLabel "people Age";
+	d2rq:column "people.Age";
+	d2rq:datatype xsd:integer;
+	.
+map:people_Mobile a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:people;
+	d2rq:property vocab:people_Mobile;
+	d2rq:propertyDefinitionLabel "people Mobile";
+	d2rq:column "people.Mobile";
+	.
+

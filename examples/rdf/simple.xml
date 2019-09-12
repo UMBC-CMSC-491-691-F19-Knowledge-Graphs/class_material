@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TriX xmlns='http://www.w3.org/2004/03/trix/trix-1/'>
+	<graph>
+		<triple>
+			<uri>unknown:namespace#john</uri>
+			<uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</uri>
+			<uri>http://xmlns.com/foaf/0.1/Person</uri>
+		</triple>
+		<triple>
+			<uri>unknown:namespace#john</uri>
+			<uri>http://xmlns.com/foaf/0.1/gender</uri>
+			<plainLiteral>Male</plainLiteral>
+		</triple>
+		<triple>
+			<uri>unknown:namespace#john</uri>
+			<uri>http://xmlns.com/foaf/0.1/name</uri>
+			<plainLiteral>John Smith</plainLiteral>
+		</triple>
+		<triple>
+			<uri>unknown:namespace#john</uri>
+			<uri>http://xmlns.com/foaf/0.1/name</uri>
+			<plainLiteral>Johnny Smith</plainLiteral>
+		</triple>
+		<triple>
+			<uri>unknown:namespace#john</uri>
+			<uri>http://xmlns.com/foaf/0.1/knows</uri>
+			<uri>unknown:namespace#mary</uri>
+		</triple>
+		<triple>
+			<id>node18h0k6e44x1</id>
+			<uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</uri>
+			<uri>http://xmlns.com/foaf/0.1/Person</uri>
+		</triple>
+		<triple>
+			<id>node18h0k6e44x1</id>
+			<uri>http://xmlns.com/foaf/0.1/mbox</uri>
+			<uri>mailto:mary.smith@gmail.com</uri>
+		</triple>
+		<triple>
+			<uri>unknown:namespace#john</uri>
+			<uri>http://xmlns.com/foaf/0.1/knows</uri>
+			<id>node18h0k6e44x1</id>
+		</triple>
+		<triple>
+			<uri>unknown:namespace#mary</uri>
+			<uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</uri>
+			<uri>http://xmlns.com/foaf/0.1/Person</uri>
+		</triple>
+		<triple>
+			<uri>unknown:namespace#mary</uri>
+			<uri>http://xmlns.com/foaf/0.1/name</uri>
+			<plainLiteral>Mary Smith</plainLiteral>
+		</triple>
+	</graph>
+</TriX>

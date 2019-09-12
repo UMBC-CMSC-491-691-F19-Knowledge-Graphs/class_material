@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE library SYSTEM "library.dtd">
+<library location="Bremen">
+	<author name="Henry Wise">
+	   <book title="Artificial Intelligence"/>
+	   <book title="Modern Web Services"/>
+	   <book title="Theory of Computation"/>
+	</author>
+	<author name="William Smart">
+		<book title="Artificial Intelligence"/>
+	</author>
+	<author name="Cynthia Singleton">
+	   <book title="The Semantic Web"/>
+	   <book title="Browser Technology Revised"/>
+	</author>
+</library>

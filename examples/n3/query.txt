@@ -1,0 +1,8 @@
+@PREFIX gc: <http://www.daml.org/2001/01/gedcom/gedcom#>.
+
+SELECT ?Person ?Name where
+ {?Person gc:sex gc:Male .
+  ?Person gc:givenName ?Name .
+ }
+
+

@@ -1,0 +1,25 @@
+mysql> create database iswc;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> create user 'demo'@'localhost' identified by 'demo';
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> grant all on iswc.* to 'demo'@'%';
+Query OK, 0 rows affected (0.06 sec)
+
+d2rq> mysql -u finin -p iswc <iswc-mysql.sql 
+Enter password: 
+
+
+create database lab;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> grant all on lab.* to 'demo'@'localhost';
+Query OK, 0 rows affected (0.00 sec)
+
+generate-mapping -u demo –p demo -o mapping-lab.ttl -b 'http://ebiq.org/o/lab' 'jdbc:mysql://127.0.0.1/lab'
+
+
+d2r-server -p 8080 mapping-lab.n3
+
+

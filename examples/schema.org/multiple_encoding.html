@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document with multiple schema.org encodings</title>
+</head>
+<body>
+	<h1>Document with multiple schema.org encodings</h1>
+<p>Here is an example of a web page that has semantaic markup using schma.org vocabulary in all three encoding that search engines check for: microdata, RDFa and JSON-LD. You can see what structured data will be extracted by Google by entering this page's url into Google's <a href="https://search.google.com/structured-data/testing-tool/u/0/">structured data testing tool</a>.</p>
+
+<h3> Microdata </h3>
+	<p itemscope itemtype="http://schema.org/Person"><span itemprop="name">John Smith</span> lives in <span itemprop="address" itemscope itemtype="postalAddress"><span itemprop="addressLocality">Baltimore</span></span>. </p>
+
+<h3> RDFa </h3>
+<p vocab="http://schema.org/" typeof="Person"><span property="name">John Smith</span> lives in <span property="name">Baltimore</span>. </p>
+
+<h3> JSON-LD </h3>
+<p>John Smith  lives in Baltimore. </p>
+<script type="application/ld+json">
+{"@context":"http://schema.org/",
+ "@type":"Person",
+ "name":"John Smith",
+ "address": {"@type":"postalAddress",
+             "addressLocality": "Baltimore"}
+}
+</script>
+
+</body>
+</html>

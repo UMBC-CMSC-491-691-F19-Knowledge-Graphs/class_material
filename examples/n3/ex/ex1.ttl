@@ -1,0 +1,4 @@
+@prefix : <#> .
+@prefix fam: <http://691.finin.org/o/family#> .
+
+:eve fam:mother_of :cain.

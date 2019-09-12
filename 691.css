@@ -1,0 +1,424 @@
+/* CSS Document */
+
+/* adapted from Dan Hood's course css files */
+
+
+#header {
+	font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+	 padding: 5px 5px;
+}
+
+
+
+#nav {
+    font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+	color: silver
+    height: 38px;
+    padding: 5px 5px;
+	text-align: center;
+	text-decoration:none;
+}
+
+#nav a {
+    text-decoration:none;
+	color: silver
+}
+
+#nav a:hover {
+    color:white;
+}
+
+/* footer specific */
+#footer {
+    font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+    border-top: 4px solid #000;
+    padding: 10px 0px;
+    color: #000;
+    text-align: right;
+    clear: both;
+}
+#footer a {
+    text-decoration: none;
+    color: #000;
+}
+
+#footer a:hover {
+    font-weight:bold;
+}
+
+#footer div a {
+    float: left;
+}
+
+ 
+#wrapper { 
+    margin: 20px auto; 
+    width: 940px; 
+    background-color: #fff;
+    text-align: left;
+    padding: 0 20px;
+    border: 2px solid #e1e1e1;
+} 
+
+#content {
+	clear: both;
+	padding: 20px 20px;
+	font-size: 16px;
+	line-height: 22px;
+	text-align: left;
+}
+
+
+/* general rules */
+hr {
+    background-color: #E7E7E7;
+    border: none;
+    clear: both;
+    height: 1px;
+}
+#content h1 {
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+#content h2 {
+    font-size: 28px;
+    margin-top: 24px;
+}
+#content h3 {
+    font-size: 22px;
+    margin-top: 24px;
+	text-align: left;
+}
+#content h1, #content h2, #content h3 {
+	color: #000000;
+	font-weight: normal;
+	text-align: center;
+}
+#content p, #content ul, #content ol, #content dd, #content pre, #content hr, #content h2, #content h3, #content li {
+	margin-bottom: 15px;/*    clear: both; */
+	color: #000;
+	text-align: left;
+}
+#content li li {
+    margin-bottom: 0;
+}
+
+a {
+    color: #0066cc;
+}
+strong {
+    font-weight: bold;
+}
+abbr {
+    border-bottom: 1px dotted #333;
+}
+code, kbd, samp {
+    font-family: Menlo, Monaco, Consolas, monospace;
+    background-color: #F9F9F9;
+}
+
+/* lists */
+ul, ol {
+    margin: 0 0 18px 2.25em;
+    padding: 0;
+}
+ul {
+    list-style: square outside none;
+}
+ol {
+    list-style: decimal outside none;
+}
+ol ol {
+    list-style: upper-alpha outside none;
+}
+ol ol ol {
+    list-style: lower-roman outside none;
+}
+ol ol ol ol {
+    list-style: lower-alpha outside none;
+}
+
+/*
+ul ul, ol ol, ul ol, ol ul {
+    margin-bottom: 0;
+}
+#content ul ul, #content ol ol, #content ul ol, #content ol ul {
+    margin-bottom: 0;
+}
+*/
+dt {
+    font-weight: bold;
+}
+dd {
+  margin: 0 0 18px 2.25em;
+  padding: 0;
+}
+
+
+/* tables */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#content table {
+    /* border: 1px solid #e7e7e7; */
+    margin: 0 0 15px 0;
+    text-align: left;
+}
+#content th {
+    font-weight: bold;
+    line-height: 18px;
+    padding: 9px 12px;
+}
+#content tr td {
+	/*  border-top: 1px solid #e7e7e7; */
+	padding: 6px 12px;
+	text-align: left;
+}
+#content table .num {
+    text-align: right;
+}
+#content table.vertical tr {
+   /* border-top: 1px solid #e7e7e7; */
+    border-bottom: 1px solid #e7e7e7;
+}
+
+
+/* need more semantic names for these 3 */
+.warn {
+    border: 2px solid #f0e6a6;
+    background-color: #fff7c6;
+    padding: 10px 20px;
+    color: #444;
+    margin-bottom: 15px;
+}
+.info {
+    border: 2px solid #bae2f0;
+    background-color: #e3f4f9;
+    padding: 10px 20px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+
+a.button {
+  border: 1px solid #e1e1e1;
+  background-color: #f9f9f9;
+  color: #444;
+  padding: 5px 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+
+
+/* disclosure boxes */
+.disclosure {
+  padding-left: 16px;
+  cursor: pointer;
+}
+.disclosure.closed {
+  background: transparent url('right.png') no-repeat 0 50%;
+}
+.disclosure.open {
+  background: transparent url('down.png') no-repeat 0 50%;
+}
+
+.disclosurebox {
+  background-color: #F9F9F9;
+  border: 1px solid #E1E1E1;
+  margin: 20px;
+  padding: 20px 20px 0 20px;
+}
+
+
+pre {
+    font-family: Menlo, Monaco, Consolas, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+    font-size: 14px !important;
+}
+
+/* syntaxhighlighter */
+#content .code, #content .syntaxhighlighter {
+    overflow-y: none !important; /* chrome always seems to use a scrollbar, this tosses it */
+    border: 2px solid #e1e1e1;
+    background-color: #f9f9f9;
+    color: #444;
+    padding: 10px 20px;
+    width: auto !important;
+    margin-bottom: 15px;
+    font-family: Menlo, Monaco, Consolas, "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+    font-size: 14px !important;
+}
+/*
+#content .syntaxhighlighter {
+    padding: 10px 20px 10px 0 !important;
+}
+*/
+#content .syntaxhighlighter pre {
+    padding: 0;
+}
+#content .syntaxhighlighter .gutter .line {
+    border-right: 2px solid #E1E1E1 !important;
+}
+
+
+#content .key {
+    border: 2px solid #e1e1e1;
+    background-color: #f9f9f9;
+    color: #444;
+    padding: 5px 10px;
+/*    font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif; */
+    margin-right: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 3px 3px 3px #666;
+    -webkit-box-shadow: 3px 3px 3px #666;
+    box-shadow: 3px 3px 3px #666;
+}
+
+#content .keys {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    clear: both;
+}
+#content .keys div {
+    float: left;
+    width: 320px;
+}
+#content .keys p {
+    margin-left: 340px;
+    clear: none;
+}
+
+
+/* used only on the schedule page */
+#content .calendar {
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  border-collapse: collapse;
+  border: 0;
+}
+#content .calendar td, #content .calendar th {
+  border: 1px solid #e1e1e1;
+  width: 14%;
+  vertical-align: top;
+}
+#content .calendar th {
+  border: 0;
+  text-align: center;
+}
+#content .calendar td {
+  height: 10em;
+  padding: 0;
+  font-size: 80%;
+  font-family: "Helvetica Neue", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+}
+#today { 
+  background-color: #fff7d7;
+}
+#today .date {
+  background-color: #fad163 !important;
+}
+#content .calendar .date {
+  text-align: right;
+  background-color: #f9f9f9;
+  color: #444;
+  padding: 0 8px;
+  border-bottom: 1px solid #e1e1e1;
+}
+#content .calendar .event {
+  line-height: 1.4;
+  margin: 2px;
+  padding: 0px 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #fff;
+}
+
+#content .calendar .event a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+}
+#content .calendar .event a:hover {
+  text-decoration: underline;
+}
+
+#content .calendar .lecture {
+    background-color: #3366cc;
+}
+#content .calendar .exam, #content .calendar .final {
+    background-color: #cc3333;
+}
+#content .calendar .project {
+    background-color: #3d8215;
+}
+#content .calendar .other {
+    background-color: #ee8800;
+}
+#content .calendar .lab {
+    background-color: #5229a3;
+}
+.calendarform label {
+  margin-left: 1em;
+}
+
+
+.act {
+
+    font-weight: bold;
+	font-style: normal;
+	text-transform: uppercase;
+	color: #FF0000;
+}
+
+.lead {
+    font-weight: bold;
+	font-style: normal;
+	text-transform: uppercase;
+	color: #FF0000;
+}
+
+.read { 	
+	font-weight: bold;
+	font-style: normal;
+	text-transform: uppercase;
+    color: #FF0000; 
+}
+
+.assignment { 
+
+    font-weight: bold;
+	font-style: normal;
+	text-transform: uppercase;
+	color: 	#FF8C00; }
+
+.try { 
+    font-weight: bold;
+	font-style: normal;
+	text-transform: uppercase;
+	color: 	#3300FF; }
+
+.ppt { 
+    font-weight: bold;
+	font-style: normal;
+	text-transform: uppercase;
+	color: 	#660033; }
+
+.due { 
+
+    font-weight: bold;
+	font-style: normal;
+	text-transform: uppercase;
+	color: 	#FF00FF; }
+
+	

@@ -1,0 +1,478 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/691.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="shortcut icon" href="images/kg_favicon.ico">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>UMBC CMSC 491/691 The Semantic Web</title>
+<!-- InstanceEndEditable -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-72855529-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<style type="text/css">
+<!--
+body {
+	background-color: #DBDBDB;
+}
+.boldlinks {A {text-decoration: none;color:white}
+.boldlinks  A:hover {font-weight:bold;}
+-->
+</style>
+<link href="691.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style17 {color: #FFFFFF}
+.style18 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+}
+.style20 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+}
+.style2 {
+	font-size: large;
+
+	font-weight: bold;
+}
+.style4 {font-size: 24px}
+.style5 {font-size: 32px}
+.imgresize{
+    width:100%;
+}
+.imgtag{
+    width:100%;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+.style17 {color: #FFFFFF}
+.style18 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+}
+.style20 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body>
+<table width="90%" border="0" align="center" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+  <tr>
+    <td><table width="100%" border="0" align="center" cellspacing="0" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+        <tr>
+			<td width="10%" bordercolor="#E8E8E8" bgcolor="#99CCFF" id="header"><img src="images/kg2.png" style="display:block; width:100%; height:auto;" alt=""></td>
+			<td width="90%" bordercolor="#E8E8E8" bgcolor="#99CCFF" id="header2"><div align="center">            
+            <p><span class="style18">UMBC CMSC 491/691 (07) Fall 2019</span><br/>
+            <span class="style20">Knowledge Graphs</span></p>
+          </div></td>
+        </tr>
+        <tr>
+          <td colspan="3" bgcolor="#000000">
+            <div id="nav"><span class="style17"><a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/index.html">Home</a> &middot;<a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/syllabus.html"> Syllabus</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/schedule.html">Schedule</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/hw">HW</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/exams">Exams</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/notes">Notes</a> &middot; <a href="https://github.com/UMBC-CMSC-491-691-F19-Knowledge-Graphs/">GitHub</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/examples">Examples</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/resources.html">Resources</a> &middot; <a href="https://blackboard.umbc.edu/ultra/courses/_49846_1/cl/outline">Blackboard</a> &middot;<a href="https://piazza.com/umbc/fall2019/cmsc491691section07/home"> Piazza</a></span></div>         </td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td width="100%" bordercolor="#EAEAEA" bgcolor="#FFFFFF" id="content"><!-- InstanceBeginEditable name="BODY" -->
+      <div class="imgresize"><img src="images/worldData.jpg" class="imgtag" alt=""/></div>
+      <h1 align="center"><strong>Fall 2019 Schedule -- will be updated</strong></h1>
+      <div align="center"></div>
+      <table width="100%" border="1" cellpadding="6" cellspacing="12" bordercolor="#999999" bgcolor="#CCCCCC">
+        <tr bordercolor="#000000">
+          <th width="3%" scope="col"><span class="style19">#</span></th>
+          <th width="5%" scope="col"><div align="center" class="style19">date</div></th>
+          <th width="4%" scope="col"><div align="center" class="style19">day</div></th>
+          <th width="21%" scope="col"><span class="style19">Topic</span></th>
+          <th width="70%" scope="col"><span class="style19">To do </span></th>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="AliceBlue">
+          <td>1</td>
+          <td><div align="center">8/28</div></td>
+          <td><div align="center">Wed</div></td>
+          <td>Introduction</td>
+          <td ><p><span class="act">read:</span> <a href="http://www.csee.umbc.edu/courses/graduate/691/fall16/01/papers/semanticWebSciAm.pdf">The Semantic Web </a>, Sci Am, May 2001 (<a href="http://www.csee.umbc.edu/courses/graduate/691/fall16/01/papers/semanticWebSciAm.pdf">pdf</a> )<br />
+              <span class="act">read:</span> <a href="http://cacm.acm.org/magazines/2016/9/206254-a-new-look-at-the-semantic-web/fulltext">A New Look at the Semantic Web</a>, CACM, Sept. 2016 (<a href="http://www.csee.umbc.edu/courses/graduate/691/fall16/01/papers/bernstein_cacm_16.pdf">pdf</a> )<br />
+              <span class="assignment">OUT:</span> <a href="hw/hw1/">Homework  one</a><br />
+              <span class="ppt">ppt:</span> <a href="notes/00_administrivia">Administrivia</a>, <a href="notes/01_introduction">Introduction to the Semantic Web</a></p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="AliceBlue">
+          <td>&nbsp;</td>
+          <td>9/2</td>
+          <td>Mon</td>
+          <td>No Class</td>
+          <td>UMBC closed for Labor day</td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="AliceBlue">
+          <td>2</td>
+          <td><div align="center">9/4</div></td>
+          <td><div align="center">Wed</div></td>
+          <td>Introduction</td>
+          <td><p><span class="act">read:</span> SWP Chapter 1<br />
+              <span class="act">read:</span> <a href="https://en.wikipedia.org/wiki/Knowledge_Graph">Wikipedia Knowledge Graph article</a><br />
+              <span class="act">read:</span> <a href="https://www.google.com/intl/es419/insidesearch/features/search/knowledge.html">The Knowledge Graph</a><br />
+              <span class="act">read:</span> <a href="http://en.wikipedia.org/wiki/Semantic_web">Wikipedia 
+              Semantic Web article</a><br />
+              <span class="ppt">ppt:</span> <a href="notes/01_introduction">A motivating example</a><br />
+          </p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="#F5F5F5">
+          <td>3</td>
+          <td height="37"><div align="center">9/9</div></td>
+          <td><div align="center">Mon</div></td>
+          <td>XML</td>
+          <td><p><span class="read">read:</span> SWP Appendix A<br />
+              <span class="read">read:</span> <a href="http://thefigtrees.net/lee/sw/sciam/semantic-web-in-action">The Semantic Web in Action</a>, Sci Am, 2007<br />
+              <span class="read">read:</span> <a href="http://www.csee.umbc.edu/courses/graduate/691/spring13/01/papers/web3emerging.pdf">Web 3.0 Emerging</a><br />
+              <span class="ppt">ppt:</span> <a href="notes/03_xml/03a_xml.pptx">XMLa</a> ( <a href="notes/03_xml/03a_xml.pdf">pdf </a>) <br />
+              <strong>SEE</strong>: <a href="examples/xml">XML examples</a>              <br />
+              <span class="assignment"><span class="due">due:</span> <a href="hw/hw1">Homework one</a></span><br />
+            </a></p></td>
+        </tr>
+               <tr bordercolor="#CCCCCC" bgcolor="#F5F5F5">
+          <td>4</td>
+          <td height="37"><div align="center">9/11</div></td>
+          <td><div align="center">Wed</div></td>
+          <td>XML</td>
+          <td><p><span class="read">read:</span> SWP Appendix A<br />
+              <span class="ppt">ppt:</span> <a href="notes/03_xml/03b_xml.pptx">XMLb</a> ( <a href="notes/03_xml/03xml.pdf">pdf </a>) <br />
+              <strong>SEE</strong>: <a href="examples/xml">XML examples</a>              <br />
+              <span class="assignment">OUT: HW2</span><br />
+              </a></p></td>
+        </tr>
+               <tr bordercolor="#CCCCCC" bgcolor="#F5F5F5">
+          <td>5</td>
+          <td height="37"><div align="center">9/16</div></td>
+          <td><div align="center">Mon</div></td>
+          <td>Practical XML<br />
+            JSON</td>
+          <td><p><span class="read">read:</span> SWP Appendix A<br />
+            </p>
+            <div style="text-align:left">
+              <p><span class="read">read:</span> <a href="http://json.org/">Introducing JSON</a><br />
+                <span class="read">read:</span> <a href="http://en.wikipedia.org/wiki/JSON">Wikipedia JSON article<br />
+                </a><span class="ppt">ppt:</span> XMLc</a> ( pdf) <br />
+                <span class="ppt">ppt:</span><a href="notes/03_xml/03json.pptx"> JSON</a> (<a href="notes/03_xml/03json.pdf">pdf</a>) <br />
+                <strong>SEE</strong>: <a href="examples/xml">XML examples</a><a href="hw/hw2/"><br />
+                </a></p>
+            </div></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="#F5F5F5">
+          <td>6</td>
+          <td height="37"><div align="center">9/18</div></td>
+          <td><div align="center">Wed</div></td>
+          <td>graph DBs<br />
+Neo4j</td>
+          <td><p><a href="http://www.oxygenxml.com/"><br />
+            </a> Graph databases
+              
+            </a></span><br />
+            Neo4j
+            <br />
+          </p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="aliceblue">
+          <td>7</td>
+          <td height="37"><div align="center">9/23</div></td>
+          <td><div style="text-align:center">Mon</div></td>
+          <td>graph DBs<br />
+Neo4j</td>
+          <td><div style="text-align:left">
+            <p>Graph databases<br />
+Neo4j <br />
+              </a></p>
+          </div></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="AliceBlue">
+          <td>6</td>
+          <td><div align="center">9/25</div></td>
+          <td><div align="center">Wed</div></td>
+          <td>RDF<br /></td>
+          <td><div style="text-align:left"> <span class="act">read:</span> SWP 2.1-2.4<br />
+			  <span class="act">read:</span> <a href="papers/creatingWebScience.pdf">Creating 
+            a Science of the Web</a> <br />
+            <span class="read">read:</span> <a href="papers/CACM-WebScience-Preprint.pdf">Web Science (CACM)</a><br />
+            <span class="ppt">ppt:</span> <a href="notes/01_introduction">Semantic Web technologies</a> <br />
+            <span class="assignment">DUE: HW2</span> <br />
+          </div></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="#F5F5F5">
+          <td>7</td>
+          <td><div align="center">9/30</div></td>
+          <td><div align="center">Mon</div></td>
+          <td>RDF/RDFS</td>
+          <td><p><span class="act">read:</span> SWP 2.4-2.9<br />
+              <span class="act">read: </span><a href="papers/MergePDFs.pdf">The 
+              shortest path to the future web</a><br />
+              <span style="text-align:left"><span class="ppt">ppt:</span> <a href="notes/04_rdf/04rdfSyntax1.pptx">RDF Syntax1</a> ( <a href="notes/04_rdf/04rdfSyntax1.pdf">pdf </a>) </span>              <br />
+              <span class="ppt">ppt:</span> <a href="notes/04_rdf/04rdfSyntax2.pptx">RDF Syntax 2</a> ( <a href="notes/04_rdf/04rdfSyntax2.pdf">pdf </a>)</p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="#F5F5F5">
+          <td>8</td>
+          <td><div align="center">10/2</div></td>
+          <td><div align="center">Wed</div></td>
+          <td>RDFS</td>
+          <td><p><span class="act">read:</span> SWP 2.4-2.9<br />
+              <span class="read">read:</span> <a href="http://www.w3.org/2007/02/turtle/primer/"> RDF Primer &mdash; Turtle version</a><br />
+              <span class="ppt">ppt:</span> <a href="notes/05_rdfs/05rdfs.pptx">RDF Schema</a> ( <a href="notes/05_rdfs/05rdfs.pdf">pdf </a>)<br />
+              <span class="read">onto:</span> <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns">rdf namespace</a><br />
+              <span class="read">onto:</span> <a href="http://www.w3.org/2000/01/rdf-schema">rdfs namespace</a><br />
+              <span class="ppt">ppt:</span> <a href="notes/05_rdfs/05bCWM.pptx">CWM notes</a> ( <a href="notes/05_rdfs/05bCWM.pdf">pdf</a> ) <br />
+            </p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="aliceblue">
+          <td>9</td>
+          <td><div align="center">10/7</div></td>
+          <td><div align="center">Mon</div></td>
+          <td>cwm: rdf+rules<br /></td>
+          <td><p><span class="ppt">ppt:</span> <a href="notes/05_rdfs/05bCWM.pptx">CWM notes</a> ( <a href="notes/05_rdfs/05bCWM.pdf">pdf</a> ) <br />
+            <span class="due">OUT:</span> <a href="hw/hw3">HW3</a> (N3 and cwm)<br />
+            </p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="AliceBlue">
+          <td>10</td>
+          <td><div align="center">10/9</div></td>
+          <td><div align="center">Wed</div></td>
+          <td>OWL</td>
+          <td><span class="act">read: SWP Chapter 4<br />
+              <span class="ppt">ppt:</span> <a href="notes/07_owl/07OWL.pptx">OWL</a> ( <a href="notes/07_owl/07OWL.pdf">pdf </a>)</span><a href="papers/DL_primer.pdf"><br />
+              </a></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="#F5F5F5">
+          <td>11</td>
+          <td><div align="center">10/14</div></td>
+          <td><div align="center">Mon</div></td>
+          <td>OWL and DL</td>
+          <td><p><span class="act">read: SWP Chapter 4<br />
+              <span class="ppt">ppt:</span> <a href="notes/07_owl/07OWL.pptx">OWL</a> ( <a href="notes/07_owl/07OWL.pdf">pdf </a>)</span><a href="papers/DL_primer.pdf"><br />
+              </a><br />
+            <br />
+            </p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="#F5F5F5">
+          <td>12</td>
+          <td><div align="center">10/16</div></td>
+          <td><div align="center">Wed</div></td>
+          <td>Developing Ontologies</td>
+          <td><p><br />
+              <span class="act">read: SWP Chapter 4<br />
+              <span class="read">ex:</span> <a href="examples/n3/owl-rules.n3">OWL 
+              rules in N3</a> ( <a href="notes/07_owl/07OWLn3.pptx">ppt</a> )<br />
+              <span class="ppt">ppt:</span> <a href="notes/07_owl/07OWL.pptx">OWL</a> ( <a href="notes/07_owl/07OWL.pdf">pdf </a>)</span><br />
+            <br />
+            </p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="aliceblue">
+          <td>13</td>
+          <td><div align="center">10/21</div></td>
+          <td><div align="center">Mon</div></td>
+          <td>Developing Ontologies</td>
+          <td><p><a href="papers/DL_primer.pdf"><span class="act">read:</span> A Description Logic Primer</a><br />
+              <span class="ppt">ppt:</span> <a href="notes/08_dl/08dl.pptx">DL</a> ( <a href="notes/08_dl/08dl.pdf">pdf </a>) <br />
+          </p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="AliceBlue">
+          <td>14</td>
+          <td><div align="center">10/23</div></td>
+          <td><div align="center">Wed</div></td>
+          <td> OWL</td>
+			<td><p><span class="try">try:</span> <a href="http://protege.stanford.edu/">Protege</a><br />
+				<span class="try">try:</span> <a href="https://www.stardog.com/">StarDog</a><br />
+              <span class="read">read:</span> <a href="http://protegeproject.github.io/protege/">Protege 5 Documentation</a><br />
+              <span class="read">view:</span> <a href="https://www.w3.org/TR/owl2-manchester-syntax/">Manchester OWL syntax</a><br />
+              <span class="ppt">ppt:</span> <a href="notes/10_protege/IDEs.pptx">IDEs</a> ( <a href="notes/10_protege/IDEs.pdf"> pdf</a> ) <br />
+            </p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="#F5F5F5">
+          <td>15</td>
+          <td><div align="center">10/28</div></td>
+          <td><div align="center">Mon</div></td>
+          <td>Midterm exam</td>
+          <td><p><br />
+            </p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="#F5F5F5">
+          <td>16</td>
+          <td><div align="center">10/30</div></td>
+          <td><div align="center">Wed</div></td>
+          <td>Rules and OWL</td>
+          <td><p><span class="read">read:</span> Semantic Web Primer 5.1-5.10 <br />
+              <span class="read">read:</span> <a href="http://www.w3.org/Submission/SWRL/">SWRL: 
+            a Semantic Web Rule Language</a><a href="http://www.cs.man.ac.uk/%7Ehorrocks/Publications/download/2005/HPPH05.pdf"><br />
+          <span class="ppt">ppt: </span>Owl and rules</a> (<a href="notes/14_rules/14_owl_rules.pdf">pdf</a>) </p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="AliceBlue">
+          <td>17</td>
+          <td><div align="center">11/4</div></td>
+          <td><div align="center">Mon</div></td>
+          <td>Working with Protege &amp; Stardog</td>
+          <td><p><span class="read">read:</span><a href="http://protegeproject.github.io/protege/"> Protege documentation</a><br />
+            <span class="read">read:</span><a href="https://www.stardog.com/docs/"> Stardog Documentation</a><br />
+			  <span class="read">DO</span>: Install Protege and Stardog<br />
+			  <a href=""><span class="ppt">ppt: </span>Progege, Stardog & Peeps</a> (<a href="">pdf</a>)<br>
+              <span class="due">OUT:</span> <a href="">HW4 (Protege)</a><span class="ppt"><br />
+          </span></p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="AliceBlue">
+          <td>18</td>
+          <td><div align="center">11/6</div></td>
+          <td><div align="center">Wed</div></td>
+          <td><p>Triple Stores<br />
+              RDF and RDBMs<br />
+            </p></td>
+          <td><p><span class="read">read:</span> 7.1-7.3 Semantic Web Primer<br />
+              <a href=""><span class="ppt">ppt: </span>Progege, Stardog &amp; Peeps</a> (<a href="">pdf</a>)<br />
+              <span class="due">OUT:</span> <a href="">HW4 (Protege)</a><br />
+          </p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="#F5F5F5">
+          <td>19</td>
+          <td><div align="center">11/11</div></td>
+          <td><div align="center">Mon</div></td>
+          <td><p>triple stores</p></td>
+          <td><p><span class="ppt">ppt: </span><a href="notes/16_sparql/16tripleStore.ppt">triple stores</a> (<a href="notes/16_sparql/16tripleStore.ppt.pdf">pdf</a>)<br />
+              <span class="ppt">ppt: </span><a href="notes/16_sparql/16fuseki.ppt">jena/fuseki</a> (<a href="notes/16_sparql/16fuseki.pdf">pdf</a>) <br />
+            <span class="ppt">ppt: </span><a href="notes/16_sparql/16pubby.ppt">pubby</a> (<a href="notes/16_sparql/16pubby.ppt.pdf">pdf</a>) </p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="#F5F5F5">
+          <td>20</td>
+          <td><div align="center">11/13</div></td>
+          <td><div align="center">Wed</div></td>
+          <td><p>SPARQL</p></td>
+          <td><p><span class="read">read:</span> Chapter 3, Semantic Web Primer<br />
+              <span class="ppt">ppt: </span><a href="notes/16_sparql/16sparql.ppt">sparql</a> (<a href="notes/16_sparql/16sparql.ppt.pdf">pdf</a>) <br />
+              <span class="try">try: </span><a href="hpttps://yasgui.org/">yasgui</a><br />
+              <br />
+            </p>
+            </td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="AliceBlue">
+          <td>21</td>
+          <td><div align="center">11/18</div></td>
+          <td><div align="center">Mon</div></td>
+          <td><p>SPARQL and DBpedia</p></td>
+          <td><p><span class="due">DUE:</span> <a href="">HW4 (Protege)</a><br />
+            <span class="read">read:</span> Chapter 3, Semantic Web Primer<br />
+            <span class="ppt">ppt: </span><a href="notes/16_sparql/16sparql.pptx">sparql</a> (<a href="notes/16_sparql/16sparql.pdf">pdf</a>)            <br />
+            </p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="AliceBlue">
+          <td>22</td>
+          <td><div align="center">11/20</div></td>
+          <td><div align="center">Wed</div></td>
+          <td><p>OWL 2</p></td>
+          <td><span class="read">read:</span> <a href="http://www.w3.org/TR/owl2-primer/">OWL 2 Primer</a><br />
+              <span class="read">read:</span> <a href="http://www.w3.org/TR/owl2-new-features/">OWL 2 New features and rationale </a><br />
+              <span class="ppt">ppt:</span> <a href="notes/18_owl2/18owl2.pptx">owl2</a> (<a href="notes/18_owl2/18owl2.pdf">pdf</a>)<br />
+          </td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="#F5F5F5">
+          <td>23</td>
+          <td><div align="center">11/25</div></td>
+          <td><div align="center">Mon</div></td>
+          <td>RDF and tables</td>
+          <td><p><span class="read">read:</span> 7.6 Exposing Relational Databases, Semantic Web Primer<br />
+            OUT: <a href="hw/hw5/">HW5 (SPARQL)<br />
+          </a></span></span><span class="due"><span class="ppt">ppt:</span></span> <a href="notes/20_rdbs/t2k.pptx">t2k</a> (<a href="notes/20_rdbs/t2k.pdf">pdf</a>) <br />
+              <span class="due"><span class="ppt">ppt:</span></span> <a href="notes/20_rdbs/rdf123.pptx">rdf123</a> (<a href="notes/20_rdbs/rdf123.pdf">pdf</a>) <br />
+              <span class="due"><span class="ppt">ppt:</span></span> <a href="notes/20_rdbs/20d2rq.pptx">20d2rq</a> (<a href="notes/20_rdbs/20d2rq.pdf">pdf</a>) <br />
+              VIEW: <a href="http://d2rq.org/">R2DQ site</a> and documents <br />
+            </p>
+          </td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="#F5F5F5">
+          <td>24</td>
+          <td><div align="center">11/27</div></td>
+          <td><div align="center">Wed</div></td>
+          <td><p>tbd</p></td>
+          <td><p>tbd<br />
+            </p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="AliceBlue">
+          <td>25</td>
+          <td><div align="center">12/2</div></td>
+          <td><div align="center">Mon</div></td>
+          <td><p>Adding knowledge in html, RDFa</p></td>
+          <td><p><span class="read">read:</span> <a href="http://www.w3.org/TR/xhtml-rdfa-primer/">RDFa 1.1 Primer</a> <br />
+              <span class="ppt">ppt:</span> <a href="notes/22_in_html/knowledge_in_html.pptx">Knowledge in HTML</a> ( <a href="notes/22_in_html/knowledge_in_html.pdf">pdf</a>) <br/>
+              <span class="ppt">ppt:</span> <a href="notes/22_in_html/rdfa.pptx">RDFa</a> (<a href="notes/22_in_html/rdfa.pdf">pdf</a>) <br />
+              <span class="ppt">ppt: </span><a href="notes/22_in_html/rdfa_lite.pptx">RDFa lite</a> (<a href="notes/22_in_html/rdfa_lite.pdf">pdf</a>) <br />
+            </p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="AliceBlue">
+          <td>26</td>
+          <td><div align="center">11/4</div></td>
+          <td><div align="center">Wed</div></td>
+          <td><p>Microdata, schema.org, </p></td>
+          <td><p><span class="read">view:</span><a href="http://schema.org/"> schema.org site</a><br/>
+<span class="ppt">ppt: </span><a href="notes/22_in_html/microdata.pptx">Microdata</a> (<a href="notes/22_in_html/microdata.pdf">pdf</a>)<br />
+<span class="ppt">ppt:</span> <a href="notes/22_in_html/json-ld.pptx">Markup in JSON-LD</a> (<a href="notes/22_in_html/json-ld.pdf">pdf</a>)<br />
+              <span class="due">DUE:</span> <a href="hw/hw5">HW5<br />
+              </a></p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="#F5F5F5">
+          <td>27</td>
+          <td><div align="center">12/9</div></td>
+          <td><div align="center">Mon</div></td>
+          <td>Wikidata, Freebase, Gooogle KG</td>
+          <td><p><span class="ppt">PPT:</span> <a href="notes/22_in_html/freebase.pptx">Freebase</a> ( <a href="notes/22_in_html/freebase.pdf">pdf</a> )<br />
+            <span class="ppt">PPT</span>: <a href="notes/24_wikidata/wikidata.pptx">Wikidata</a> (<a href="notes/24_wikidata/wikidata.pdf">pdf</a>)<br />
+            <span class="ppt">PPT</span>: <a href="notes/24_wikidata/wikibase.pptx">Wikibase</a> (<a href="notes/24_wikidata/wikibase.pdf">pdf</a>) <br />
+            </p>
+          </td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="#F5F5F5">
+          <td>28</td>
+          <td><div align="center">--</div></td>
+          <td><div align="center">Wed</div></td>
+          <td>Wikidata, Freebase, Gooogle KG</td>
+          <td><p><span class="ppt">PPT</span>: <a href="notes/24_wikidata/wikidata.pptx">Wikidata</a> (<a href="notes/24_wikidata/wikidata.pdf">pdf</a>)<br />
+              <span class="ppt">PPT</span>: <a href="notes/24_wikidata/wikibase.pptx">Wikibase</a> (<a href="notes/24_wikidata/wikibase.pdf">pdf</a>) <br />
+            </p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="AliceBlue">
+          <td>26</td>
+          <td>--</td>
+          <td><div align="center">Mon</div></td>
+          <td>Wrap Up</td>
+          <td><p><span class="ppt">ppt: </span> <a href="notes/23_trends">Trends</a> ( <a href="notes/23_trends/trends.pdf">pdf</a> ) <br />
+              <a href="exams/index.html">Review final</a><br />
+            </p></td>
+        </tr>
+        <tr bordercolor="#CCCCCC" bgcolor="AliceBlue">
+          <td>--</td>
+          <td>12/??</td>
+          <td>???</td>
+          <td>final exam</td>
+          <td>final exam 3:30?-5:30?, in classroom (Fine Arts 306)</td>
+        </tr>
+      
+      </table>
+      <style type="text/css">
+<!--
+.style19 {
+	font-size: x-large;
+}
+-->
+      </style>
+      <!-- InstanceEndEditable -->
+      <p>
+      <div id="footer" class="donotprint">
+  <div><a href="index.html">CMSC 491/691 Knowledge Graphs&mdash;Fall 2019</a></div>
+        <a href="http://www.cs.umbc.edu/">CSEE</a> |
+		  <a href="http://www.umbc.edu/">UMBC</a></div></p> </td> 
+  </tr>
+</table></body><!-- InstanceEnd --></html>
+

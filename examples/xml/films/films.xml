@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/xsl" href="films.xsl" ?>
+
+<films>
+  <film title ="Harry Potter and the Philosopher's Stone" year="2001">
+    <actor> Daniel Radcliffe </actor>
+    <actor> Emma Watson </actor>
+  </film>
+  <film title ="Alien" year="1979">
+    <actor> Sigourney Weaver </actor>
+  </film>
+</films>

@@ -1,7 +1,6 @@
 # A simple Turtle example 
 
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix : <#> .
 
 :john a foaf:Person;
   foaf:gender "Male";

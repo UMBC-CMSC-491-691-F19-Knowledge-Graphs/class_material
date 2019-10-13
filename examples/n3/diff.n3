@@ -1,7 +1,10 @@
 # This example shows how we can used an N3 rule to infer that two
 # entities with different SSNs are different individuals.  Try it with
 #
-#   cwm diff.n3 --think 
+#   cwm diff.n3 --think
+#
+# The approach will work when an entity can only have one value for
+# the property and the property uniquely identifies an entity.
 
 @prefix : <#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .

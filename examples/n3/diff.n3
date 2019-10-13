@@ -1,0 +1,20 @@
+# This example shows how we can used an N3 rule to infer that two
+# entities with different SSNs are different individuals.  Try it with
+#
+#   cwm diff.n3 --think 
+
+@prefix : <#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix string: <http://www.w3.org/2000/10/swap/string#>.
+
+# two entities are different if they have different social security numbers
+{ ?S1 :ssn ?SSN1 .
+  ?S2 :ssn ?SSN2 .
+  ?SSN1 string:notEqualIgnoringCase ?SSN2 .}
+ =>
+ { ?S1 owl:differentFrom ?S2 } .
+
+:eve :ssn "000-00-0001" .
+
+:adam :ssn "000-00-0002" .
+

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="../Templates/691.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<link rel="shortcut icon" href="images/kg_favicon.ico" />
+<link rel="icon" href="images/kg_favicon.png" />
 <!-- InstanceBeginEditable name="doctitle" -->
 
 <title>UMBC CMSC 491/691 A Web of Data, Spring 2013</title>

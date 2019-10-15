@@ -1,0 +1,20 @@
+# This example shows how to tag a literal as an integer, which is
+# required for operating on it in CWM using the predicates in its math package.
+#
+# In RDF, typed literal values comprise a string (the lexical form of
+# the literal) and a datatype (identified by a URI). The datatype is
+# supposed to denote a mapping from lexical forms to some space of
+#  values, like integers, reals or booleans.
+
+@prefix : <#> .
+@prefix math: <http://www.w3.org/2000/10/swap/math#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+{ ?P :age ?AGE .
+ ?AGE math:greaterThan "65"^^xsd:int  }
+=>
+ { ?P a :SeniorCitizen } .
+
+:adam :age "930"^^xsd:int .
+
+

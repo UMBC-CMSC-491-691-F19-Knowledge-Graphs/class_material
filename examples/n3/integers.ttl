@@ -15,6 +15,6 @@
 =>
  { ?P a :SeniorCitizen } .
 
-:adam :age "930"^^xsd:int .
+:adam a :Person;  :age "930"^^xsd:int .
 
 

@@ -1,0 +1,22 @@
+# A simple Turtle example 
+
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <#> .
+
+:john a foaf:Person;
+  foaf:gender "Male";
+  foaf:name "John Smith", "Johnny Smith";
+  foaf:knows :mary,
+             [a foaf:Person;
+                foaf:mbox <mailto:mary.smith@gmail.com>] .
+
+:mary a foaf:Person; 
+      foaf:name "Mary Smith" .
+
+
+
+
+  
+
+
+

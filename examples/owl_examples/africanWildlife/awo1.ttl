@@ -1,0 +1,391 @@
+@prefix : <xml:base#> .
+@prefix p1: <#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl2: <http://www.w3.org/2006/12/owl2#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix AfricanWildlifeOntology1: <file:/Applications/Protege_4.1_beta/AfricanWildlifeOntology1.owl#> .
+@base <http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl> .
+
+<http://www.meteck.org/teaching/ontologies/AfricanWildlifeOntology1.owl> rdf:type owl:Ontology ;
+                                                                          rdfs:comment "African Wildlide Ontology, Semantic Web Primer, 4.3.1 pages 119-133" ,
+                                                                                       """AfricanWildlifeOntology0.owl was then modified by Maria Keet (classes and object properties added, more comments added, updated the uri etc) and renamed into AfricanWildlifeOntology1.owl. 
+This is still an ontology just for tutorial purposes, so take it with a grain of salt""" ,
+                                                                                       "MK downloaded this file from http://www.iro.umontreal.ca/~lapalme/ift6281/OWL/AfricanWildlifeOntology.xml, changed the extension to .owl and appended the name with Web. That ontology give a load error in protege due to the use of Collection in the definition of Herbivore, so the AfricanWildlifeOntology0.owl has that piece removed." .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#comment
+rdfs:comment rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  #has-part
+p1:has-part rdf:type owl:ObjectProperty ;
+            owl:inverseOf AfricanWildlifeOntology1:is-part-of ;
+            rdf:type owl:TransitiveProperty .
+
+
+###  #is-proper-part-of
+p1:is-proper-part-of rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf AfricanWildlifeOntology1:is-part-of ;
+                     rdf:type owl:IrreflexiveProperty .
+
+
+###  file:/Applications/Protege_4.1_beta/AfricanWildlifeOntology1.owl#eaten-by
+AfricanWildlifeOntology1:eaten-by rdf:type owl:ObjectProperty ;
+                                  owl:inverseOf AfricanWildlifeOntology1:eats .
+
+
+###  file:/Applications/Protege_4.1_beta/AfricanWildlifeOntology1.owl#eats
+AfricanWildlifeOntology1:eats rdf:type owl:ObjectProperty ;
+                              rdfs:range [ rdf:type owl:Class ;
+                                           owl:unionOf ( AfricanWildlifeOntology1:animal
+                                                         AfricanWildlifeOntology1:plant
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty AfricanWildlifeOntology1:is-part-of ;
+                                                           owl:someValuesFrom AfricanWildlifeOntology1:animal
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty AfricanWildlifeOntology1:is-part-of ;
+                                                           owl:someValuesFrom AfricanWildlifeOntology1:plant
+                                                         ]
+                                                       )
+                                         ] .
+
+
+###  file:/Applications/Protege_4.1_beta/AfricanWildlifeOntology1.owl#is-part-of
+AfricanWildlifeOntology1:is-part-of rdf:type owl:ObjectProperty ,
+                                             owl:TransitiveProperty ,
+                                             owl:ReflexiveProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  #Berry
+p1:Berry rdf:type owl:Class ;
+         rdfs:subClassOf p1:FruitingBody .
+
+
+###  #CarnivorousPlant
+p1:CarnivorousPlant rdf:type owl:Class ;
+                    rdfs:subClassOf AfricanWildlifeOntology1:plant ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty AfricanWildlifeOntology1:eats ;
+                                      owl:someValuesFrom AfricanWildlifeOntology1:animal
+                                    ] .
+
+
+###  #Elephant
+p1:Elephant rdf:type owl:Class ;
+            rdfs:subClassOf AfricanWildlifeOntology1:herbivore .
+
+
+###  #FruitingBody
+p1:FruitingBody rdf:type owl:Class ;
+                rdfs:subClassOf p1:PlantParts .
+
+
+###  #Grass
+p1:Grass rdf:type owl:Class ;
+         rdfs:subClassOf AfricanWildlifeOntology1:plant .
+
+
+###  #Impala
+p1:Impala rdf:type owl:Class ;
+          rdfs:subClassOf AfricanWildlifeOntology1:animal ;
+          rdfs:comment "An african antelope http://en.wikipedia.org/wiki/Impala" .
+
+
+###  #Omnivore
+p1:Omnivore rdf:type owl:Class ;
+            owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty AfricanWildlifeOntology1:eats ;
+                                                         owl:someValuesFrom AfricanWildlifeOntology1:animal
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty AfricanWildlifeOntology1:eats ;
+                                                         owl:someValuesFrom AfricanWildlifeOntology1:plant
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty AfricanWildlifeOntology1:eats ;
+                                                         owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                              owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty AfricanWildlifeOntology1:is-part-of ;
+                                                                                              owl:someValuesFrom AfricanWildlifeOntology1:animal
+                                                                                            ]
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty AfricanWildlifeOntology1:is-part-of ;
+                                                                                              owl:someValuesFrom AfricanWildlifeOntology1:plant
+                                                                                            ]
+                                                                                          )
+                                                                            ]
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+            rdfs:subClassOf AfricanWildlifeOntology1:animal ;
+            owl:disjointWith AfricanWildlifeOntology1:carnivore ,
+                             AfricanWildlifeOntology1:herbivore .
+
+
+###  #Palmtree
+p1:Palmtree rdf:type owl:Class ;
+            rdfs:subClassOf AfricanWildlifeOntology1:plant ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty p1:has-part ;
+                              owl:someValuesFrom [ rdf:type owl:Class ;
+                                                   owl:complementOf AfricanWildlifeOntology1:branch
+                                                 ]
+                            ] ;
+            owl:disjointWith AfricanWildlifeOntology1:tree .
+
+
+###  #Phloem
+p1:Phloem rdf:type owl:Class ;
+          rdfs:subClassOf p1:PlantParts ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty p1:is-proper-part-of ;
+                            owl:someValuesFrom p1:Stem
+                          ] .
+
+
+###  #PlantParts
+p1:PlantParts rdf:type owl:Class ;
+              rdfs:subClassOf owl:Thing ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty p1:is-proper-part-of ;
+                                owl:someValuesFrom AfricanWildlifeOntology1:plant
+                              ] .
+
+
+###  #RockDassie
+p1:RockDassie rdf:type owl:Class ;
+              rdfs:subClassOf AfricanWildlifeOntology1:animal ;
+              rdfs:comment "They eat grasses and broad-leafed plants" ,
+                           "http://en.wikipedia.org/wiki/Rock_Hyrax" .
+
+
+###  #Root
+p1:Root rdf:type owl:Class ;
+        rdfs:subClassOf p1:PlantParts .
+
+
+###  #Stem
+p1:Stem rdf:type owl:Class ;
+        rdfs:subClassOf p1:PlantParts .
+
+
+###  #Twig
+p1:Twig rdf:type owl:Class ;
+        rdfs:subClassOf p1:PlantParts .
+
+
+###  #Warthog
+p1:Warthog rdf:type owl:Class ;
+           rdfs:subClassOf AfricanWildlifeOntology1:animal ,
+                           [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                    owl:onProperty AfricanWildlifeOntology1:eats ;
+                                                    owl:someValuesFrom p1:FruitingBody
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty AfricanWildlifeOntology1:eats ;
+                                                    owl:someValuesFrom p1:Grass
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty AfricanWildlifeOntology1:eats ;
+                                                    owl:someValuesFrom p1:Root
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty AfricanWildlifeOntology1:eats ;
+                                                    owl:someValuesFrom AfricanWildlifeOntology1:animal
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ;
+           rdfs:comment "Warthogs are Omnivorous http://en.wikipedia.org/wiki/Warthog" .
+
+
+###  #Xylem
+p1:Xylem rdf:type owl:Class ;
+         rdfs:subClassOf p1:PlantParts ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty p1:is-proper-part-of ;
+                           owl:someValuesFrom p1:Stem
+                         ] .
+
+
+###  file:/Applications/Protege_4.1_beta/AfricanWildlifeOntology1.owl#animal
+AfricanWildlifeOntology1:animal rdf:type owl:Class ;
+                                owl:disjointWith AfricanWildlifeOntology1:plant .
+
+
+###  file:/Applications/Protege_4.1_beta/AfricanWildlifeOntology1.owl#branch
+AfricanWildlifeOntology1:branch rdf:type owl:Class ;
+                                rdfs:subClassOf p1:PlantParts ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty AfricanWildlifeOntology1:is-part-of ;
+                                                  owl:someValuesFrom AfricanWildlifeOntology1:tree
+                                                ] ;
+                                rdfs:comment "Branches are parts of trees." .
+
+
+###  file:/Applications/Protege_4.1_beta/AfricanWildlifeOntology1.owl#carnivore
+AfricanWildlifeOntology1:carnivore rdf:type owl:Class ;
+                                   owl:equivalentClass [ rdf:type owl:Class ;
+                                                         owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty AfricanWildlifeOntology1:eats ;
+                                                                         owl:allValuesFrom AfricanWildlifeOntology1:animal
+                                                                       ]
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty AfricanWildlifeOntology1:eats ;
+                                                                         owl:allValuesFrom [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty AfricanWildlifeOntology1:is-part-of ;
+                                                                                             owl:someValuesFrom AfricanWildlifeOntology1:animal
+                                                                                           ]
+                                                                       ]
+                                                                     )
+                                                       ] ;
+                                   rdfs:subClassOf AfricanWildlifeOntology1:animal ;
+                                   owl:disjointWith AfricanWildlifeOntology1:herbivore ;
+                                   rdfs:comment "Carnivores are exactly those animals that eat only animals." .
+
+
+###  file:/Applications/Protege_4.1_beta/AfricanWildlifeOntology1.owl#giraffe
+AfricanWildlifeOntology1:giraffe rdf:type owl:Class ;
+                                 rdfs:subClassOf AfricanWildlifeOntology1:animal ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty AfricanWildlifeOntology1:eats ;
+                                                   owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                       owl:unionOf ( p1:Twig
+                                                                                     AfricanWildlifeOntology1:leaf
+                                                                                   )
+                                                                     ]
+                                                 ] ;
+                                 owl:disjointWith AfricanWildlifeOntology1:lion ;
+                                 rdfs:comment "Giraffes are herbivores, and they eat only leaves." ,
+                                              "they also eat twigs" .
+
+
+###  file:/Applications/Protege_4.1_beta/AfricanWildlifeOntology1.owl#herbivore
+AfricanWildlifeOntology1:herbivore rdf:type owl:Class ;
+                                   owl:equivalentClass [ rdf:type owl:Class ;
+                                                         owl:unionOf ( [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty AfricanWildlifeOntology1:eats ;
+                                                                         owl:allValuesFrom AfricanWildlifeOntology1:plant
+                                                                       ]
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty AfricanWildlifeOntology1:eats ;
+                                                                         owl:allValuesFrom [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty AfricanWildlifeOntology1:is-part-of ;
+                                                                                             owl:someValuesFrom AfricanWildlifeOntology1:plant
+                                                                                           ]
+                                                                       ]
+                                                                     )
+                                                       ] ;
+                                   rdfs:subClassOf AfricanWildlifeOntology1:animal ;
+                                   rdfs:comment "Herbivores are exactly those animals that eat only plants or parts of plants " .
+
+
+###  file:/Applications/Protege_4.1_beta/AfricanWildlifeOntology1.owl#leaf
+AfricanWildlifeOntology1:leaf rdf:type owl:Class ;
+                              rdfs:subClassOf p1:PlantParts ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty AfricanWildlifeOntology1:is-part-of ;
+                                                owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                     owl:unionOf ( p1:Twig
+                                                                                   AfricanWildlifeOntology1:branch
+                                                                                 )
+                                                                   ]
+                                              ] ;
+                              rdfs:comment "Leaves are parts of branches." .
+
+
+###  file:/Applications/Protege_4.1_beta/AfricanWildlifeOntology1.owl#lion
+AfricanWildlifeOntology1:lion rdf:type owl:Class ;
+                              rdfs:subClassOf AfricanWildlifeOntology1:animal ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty AfricanWildlifeOntology1:eats ;
+                                                owl:someValuesFrom p1:Impala
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty AfricanWildlifeOntology1:eats ;
+                                                owl:allValuesFrom AfricanWildlifeOntology1:herbivore
+                                              ] ;
+                              rdfs:comment "Lions are animals that eat only herbivores." .
+
+
+###  file:/Applications/Protege_4.1_beta/AfricanWildlifeOntology1.owl#plant
+AfricanWildlifeOntology1:plant rdf:type owl:Class ;
+                               rdfs:comment "Plants are disjoint from animals." .
+
+
+###  file:/Applications/Protege_4.1_beta/AfricanWildlifeOntology1.owl#tasty-plant
+AfricanWildlifeOntology1:tasty-plant rdf:type owl:Class ;
+                                     rdfs:subClassOf AfricanWildlifeOntology1:plant ,
+                                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty AfricanWildlifeOntology1:eaten-by ;
+                                                                              owl:someValuesFrom AfricanWildlifeOntology1:carnivore
+                                                                            ]
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty AfricanWildlifeOntology1:eaten-by ;
+                                                                              owl:someValuesFrom AfricanWildlifeOntology1:herbivore
+                                                                            ]
+                                                                          ) ;
+                                                       rdf:type owl:Class
+                                                     ] ;
+                                     rdfs:comment "Plants eaten both by herbivores and carnivores" .
+
+
+###  file:/Applications/Protege_4.1_beta/AfricanWildlifeOntology1.owl#tree
+AfricanWildlifeOntology1:tree rdf:type owl:Class ;
+                              rdfs:subClassOf AfricanWildlifeOntology1:plant ;
+                              rdfs:comment "'plant' is here a shorthand for plant kingdom" ,
+                                           "Trees are a type of plant." .
+
+
+###  http://www.w3.org/2002/07/owl#Thing
+owl:Thing rdf:type owl:Class .
+
+
+###  xml:base#Apple
+:Apple rdf:type owl:Class ;
+       rdfs:subClassOf p1:FruitingBody .
+
+
+###  xml:base#Distribution
+:Distribution rdf:type owl:Class .
+
+
+###  xml:base#Habitat
+:Habitat rdf:type owl:Class .
+
+
+###  xml:base#Parsnip
+:Parsnip rdf:type owl:Class ;
+         rdfs:subClassOf p1:Root .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( p1:Twig
+                AfricanWildlifeOntology1:branch
+                AfricanWildlifeOntology1:leaf
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

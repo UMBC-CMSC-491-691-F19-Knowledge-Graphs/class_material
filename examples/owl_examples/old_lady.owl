@@ -1,0 +1,65 @@
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+
+Ontology: <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9>
+
+
+ObjectProperty: <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#has_pet>
+
+    Domain: 
+        <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#person>
+    
+    Range: 
+        <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#animal>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#elderly>
+
+    
+Class: <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#female>
+
+    
+Class: <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#person>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#animal>
+    
+    DisjointWith: 
+        <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#cat>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#cat>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#animal>
+    
+    DisjointWith: 
+        <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#person>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#old_lady>
+
+    EquivalentTo: 
+        <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#elderly>
+         and <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#female>
+         and <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#person>
+    
+    SubClassOf: 
+        (<http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#has_pet> some <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#cat>)
+         and (<http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#has_pet> only <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#cat>)
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#animal>
+
+    
+Individual: <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#granny>
+
+    Types: 
+        <http://www.semanticweb.org/ontologies/2013/2/untitled-ontology-9#old_lady>
+    
+    

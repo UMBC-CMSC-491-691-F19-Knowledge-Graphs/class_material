@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY awo "http://example.com/awo.owl#" >
+]>
+
+
+<rdf:RDF xmlns="xml:base#"
+     xml:base="xml:base"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:awo="http://example.com/awo.owl#">
+
+    <owl:Ontology rdf:about="xml:base">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XLMSchema#string">MK downloaded this file from http://www.iro.umontreal.ca/~lapalme/ift6281/OWL/AfricanWildlifeOntology.xml, changed the extension to .owl and appended the name with Web. That ontology give a load error in protege due to the use of Collection in the definition of Herbivore, so the awo.owl has that piece removed.</rdfs:comment>
+        <rdfs:comment>African Wildlide Ontology, Semantic Web Primer, 4.3.1 pages 119-133</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:/Applications/Protege_4.1_beta/awo.owl#eaten_by -->
+
+    <owl:ObjectProperty rdf:about="&awo;eaten_by"/>
+    
+    <!-- file:/Applications/Protege_4.1_beta/awo.owl#eats -->
+
+    <owl:ObjectProperty rdf:about="&awo;eats">
+        <rdfs:domain rdf:resource="&awo;animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- file:/Applications/Protege_4.1_beta/awo.owl#is-part-of -->
+
+    <owl:ObjectProperty rdf:about="&awo;is-part-of">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- file:/Applications/Protege_4.1_beta/awo.owl#animal -->
+
+    <owl:Class rdf:about="&awo;animal">
+        <owl:disjointWith rdf:resource="&awo;plant"/>
+    </owl:Class>
+    
+
+
+    <!-- file:/Applications/Protege_4.1_beta/awo.owl#branch -->
+
+    <owl:Class rdf:about="&awo;branch">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&awo;is-part-of"/>
+                <owl:allValuesFrom rdf:resource="&awo;tree"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Branches are parts of trees. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Applications/Protege_4.1_beta/awo.owl#carnivore -->
+
+    <owl:Class rdf:about="&awo;carnivore">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&awo;eats"/>
+                <owl:someValuesFrom rdf:resource="&awo;animal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="&awo;herbivore"/>
+        <rdfs:comment>Carnivores are exactly those animals that eat also animals.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Applications/Protege_4.1_beta/awo.owl#giraffe -->
+
+    <owl:Class rdf:about="&awo;giraffe">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&awo;eats"/>
+                <owl:allValuesFrom rdf:resource="&awo;leaf"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Giraffes are herbivores, and they eat only leaves.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Applications/Protege_4.1_beta/awo.owl#herbivore -->
+
+    <owl:Class rdf:about="&awo;herbivore">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&awo;eats"/>
+                        <owl:allValuesFrom rdf:resource="&awo;plant"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&awo;eats"/>
+                        <owl:allValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&awo;is-part-of"/>
+                                <owl:someValuesFrom rdf:resource="&awo;plant"/>
+                            </owl:Restriction>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>Herbivores are exactly those animals that eat only plants or parts of plants </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Applications/Protege_4.1_beta/awo.owl#leaf -->
+
+    <owl:Class rdf:about="&awo;leaf">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&awo;is-part-of"/>
+                <owl:allValuesFrom rdf:resource="&awo;branch"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Leaves are parts of branches. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Applications/Protege_4.1_beta/awo.owl#lion -->
+
+    <owl:Class rdf:about="&awo;lion">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&awo;eats"/>
+                <owl:allValuesFrom rdf:resource="&awo;herbivore"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Lions are animals that eat only herbivores.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Applications/Protege_4.1_beta/awo.owl#plant -->
+
+    <owl:Class rdf:about="&awo;plant">
+        <rdfs:comment>Plants are disjoint from animals. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Applications/Protege_4.1_beta/awo.owl#tasty-plant -->
+
+    <owl:Class rdf:about="&awo;tasty-plant">
+        <rdfs:subClassOf rdf:resource="&awo;plant"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&awo;eaten_by"/>
+                <owl:someValuesFrom rdf:resource="&awo;carnivore"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Plants eaten both by herbivores and carnivores </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- file:/Applications/Protege_4.1_beta/awo.owl#tree -->
+
+    <owl:Class rdf:about="&awo;tree">
+        <rdfs:subClassOf rdf:resource="&awo;plant"/>
+        <rdfs:comment>Trees are a type of plant. </rdfs:comment>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0.1451) http://owlapi.sourceforge.net -->
+

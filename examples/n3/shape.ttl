@@ -1,0 +1,35 @@
+@prefix : <#> .
+@prefix math: <http://www.w3.org/2000/10/swap/math#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# a rectangle whose height and width are equal has shape "square"
+{?X a :Rectangle .
+ ?X :height ?H .
+ ?X :width ?W .
+ ?H math:equalTo ?W }
+ =>
+{ ?X :shape "square" } .
+
+# a rectangle whose height > width has shape "tall"
+{?X a :Rectangle .
+ ?X :height ?H .
+ ?X :width ?W .
+ ?H math:greaterThan ?W}
+ =>
+{?X :shape "tall" } .
+
+# a rectangle whose width > height has shape "wide"
+{?X a :Rectangle .
+ ?X :height ?H .
+ ?X :width ?W .
+ ?W math:greaterThan ?H }
+ =>
+{?X :shape "wide"} .
+
+# some examples
+:r1 a :Rectangle; :height "10"^^xsd:int; :width "10"^^xsd:int.
+:r2 a :Rectangle; :height "10"^^xsd:int; :width "5"^^xsd:int.
+:r3 a :Rectangle; :height "5"^^xsd:int; :width "10"^^xsd:int.
+ 
+ 
+

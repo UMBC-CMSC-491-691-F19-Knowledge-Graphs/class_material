@@ -35,7 +35,7 @@
 {?X :shape "wide"} .
 
 # some examples
-:r1 a :Rectangle; :height "10"^^xsd:int; :width "10"^^xsd:int.
+:r1 a :Rectangle; :height 10 ; :width 10.
 :r2 a :Rectangle; :height "10"^^xsd:int; :width "5"^^xsd:int.
 :r3 a :Rectangle; :height "5"; :width "10" .
  

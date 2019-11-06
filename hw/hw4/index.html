@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/691.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<link rel="icon" href="images/kg_favicon.png" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>UMBC CMSC 491/691 The Semantic Web</title>
+<!-- InstanceEndEditable -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-72855529-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<style type="text/css">
+<!--
+body {
+	background-color: #DBDBDB;
+}
+.boldlinks {A {text-decoration: none;color:white}
+.boldlinks  a:hover {font-weight:bold;}
+-->
+</style>
+<link href="../../691.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style17 {color: #FFFFFF}
+.style18 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+}
+.style20 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+}
+.style2 {
+	font-size: large;
+
+	font-weight: bold;
+}
+.style4 {font-size: 24px}
+.style5 {font-size: 32px}
+.imgresize{
+    width:100%;
+}
+.imgtag{
+    width:100%;
+}
+-->
+</style>
+<style type="text/css">
+<!--
+.style17 {color: #FFFFFF}
+.style18 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+}
+.style20 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 50px;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+
+<body>
+<table width="90%" border="0" align="center" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+  <tr>
+    <td><table width="100%" border="0" align="center" cellspacing="0" bordercolor="#FFFFFF" bgcolor="#FFFFFF">
+        <tr>
+			<td width="10%" bordercolor="#E8E8E8" bgcolor="#99CCFF" id="header"><img src="../../images/kg2.png" style="display:block; width:100%; height:auto;" alt="" /></td>
+			<td width="90%" bordercolor="#E8E8E8" bgcolor="#99CCFF" id="header2"><div align="center">            
+            <p><span class="style18">UMBC CMSC 491/691 (07) Fall 2019</span><br/>
+            <span class="style20">Knowledge Graphs</span></p>
+          </div></td>
+        </tr>
+        <tr>
+          <td colspan="3" bgcolor="#000000">
+            <div id="nav"><span class="style17"><a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/index.html">Home</a> &middot;<a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/syllabus.html"> Syllabus</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/schedule.html">Schedule</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/hw">HW</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/exams">Exams</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/notes">Notes</a> &middot; <a href="https://github.com/UMBC-CMSC-491-691-F19-Knowledge-Graphs/">GitHub</a> &middot; 
+                <a href="https://github.com/UMBC-CMSC-491-691-F19-Knowledge-Graphs/class_material">Class Material</a> &middot; 
+                
+                <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/examples">Examples</a> &middot; <a href="https://www.csee.umbc.edu/courses/graduate/691/fall19/07/resources.html">Resources</a> &middot; <a href="https://blackboard.umbc.edu/ultra/courses/_49846_1/cl/outline">Blackboard</a> &middot;<a href="https://piazza.com/umbc/fall2019/cmsc491691section07/home"> Piazza</a></span></div>         </td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td width="100%" bordercolor="#EAEAEA" bgcolor="#FFFFFF" id="content"><!-- InstanceBeginEditable name="BODY" --> 
+      <p class="style17">&nbsp;</p>
+      <table width="100%" border="1" cellspacing="2" cellpadding="2">
+        <tr>
+          <td width="19%"><img src="owlw3c.gif" width="162" height="145" /></td>
+          <td width="81%"><h2 align="center"><span class="style5">Homework Four</span></h2>
+            <h2 align="center">Developing an OWL Ontology in Protege </h2>
+          <h3 align="center" class="style6">out Wednesday 2019-11-06, due Monday 2018-11-18</h3></td>
+        </tr>
+      </table>
+      <p>This homework will give you some experience in using the Protege editor to develop a simple OWL ontology with some example data.</p>
+      <h2>Getting started</h2>
+      
+      <p>Here are some preliminary steps to get you ready to do the actual assignment, which is relatively simple.</p>
+      <ul>
+
+<li>Explore the <a href="http://protege.stanford.edu/">Protege web site</a></li>
+
+<li><a href="https://protege.stanford.edu/products.php#desktop-protege">Download</a> and install the latest release. If you want to use the OWLViz panel which will generate diagrams of parts of ontologies, you will probably have to install the graphviz package. See the <a href="http://protegewiki.stanford.edu/wiki/OWLViz">OWLViz</a> information. You will need to also install one of the reasoning plugins. We recommend Pellet or Hermit.</li>
+
+<li>Read <a href="http://protegewiki.stanford.edu/wiki/Protege4GettingStarted">Getting Started with Protege Desktop Editor</a> which is designed to help get you up and running quickly</li>
+
+<li>Look at <a href="http://protege.stanford.edu/publications/ontology_development/ontology101.pdf">Ontology Development 101: A Guide to Creating Your First Ontology</a> which general advice and suggestions on ontology development</li>
+
+</ul>
+
+      <h2>The Ontology</h2>
+
+<p>Build a simple ontology for the following conceptual model of the world.  Parts may be underspecified.  If you think this is the case, use common sense to fill in missing aspects. There are many ways to express most of these constraints that are logically equivalent. Choose the way that seems succinct and intuitive. You can, and in many cases, should use different names for your classes and properties to make their meaning be more intuitive to an English speaker. For example, you might use <strong>hasMother</strong> for the property linking a person to her mother rather than <strong>mother</strong>. Some guidance on <a href="http://wiki.opensemanticframework.org/index.php/Ontology_Best_Practices#Naming_and_Vocabulary_Best_Practices">best practices for vocabulary names</a> is here.</p>
+<p>The following statements describe the ontology you should create.  It's intentionally given in an unstructured, redundant and rambling form, because this is often how a "customer" or domain expert might describe a set of concepts and relations.  So you first step is probably to assemble and organize list of the classes and properties that are needed.  Then you can give them names that are appropriate for an OWL ontology.  Then you can identify the detailed axioms/constratins that each should have.  Finally, you can enter them into Protege.  As you do this, you will probably want to add some data to test your ontology and discover issues.</p>
+
+<ul>
+<p>All things in the world are either<strong> physical objects</strong> or <strong>abstract objects</strong>.  Both kinds of things can have any number of <strong>name properties</strong>, whose values are strings.  Nothing can be both a <strong>physical object</strong> and also an an abstract object.</p>
+
+<p>Physical objects can have a <strong>location property</strong>, but abstract objects cannot.  A location's value must be a kind of <strong>place</strong>, which is a type of abstract object whose properties include a <strong>longitude</strong> and a<strong> latitude</strong>, both of which are real numbers.</p>
+
+<p>All physical objects are either an <strong>animate</strong> object or an <strong>inanimate</strong> object.  Nothing can be both.  Some animate objects are <strong>sexual-reproducers</strong> and some are not.  All sexual reproducers are animate objects.  Every sexual-reproducer is either a <strong>male</strong> or a <strong>female</strong> and none is both and only <strong>sexual-reproducers</strong> can be <strong>male</strong> or <strong>female</strong>.</p>
+
+<p>A <strong>male</strong> thing has a <strong>sex</strong> property whose value is the string "male" and a <strong>female</strong> thing has <strong>sex</strong> property whose value is "female".  Moreover, if a thing has a <strong>sex</strong> property the value must be one of the strings "male" or "female".  All things that have a<strong> sex</strong> property with the value "male" are <strong>male</strong> things. All things that have a <strong>sex</strong> property with the value "female" are <strong>female</strong> things.</p>
+
+<p>One type of <strong>animate</strong> object is a <strong>person</strong>.  A <strong>person</strong> can have many properties.  Every person has exactly one <strong>age</strong> property, whose value is an integer, exactly one <strong>mother</strong> property, whose value must be a kind of <strong>woman</strong>, exactly one <strong>father</strong>, whose value must be a kind of <strong>man</strong>, exactly one <strong>social security number</strong>, whose value is a string.  No two people can have the same social security number.</p>
+
+<p>A person can have any number of<strong> employer </strong>properties whose values must be a kind of <strong>organization</strong>.  An <strong>organization</strong> is a kind of <strong>abstract</strong> object.<strong> </strong>Infants cannot have an employer.</p>
+
+<p>A <strong>person</strong> has exactly two <strong>parent</strong> properties, one if which is the person's <strong>mother</strong> and the other the person's <strong>father.</strong> The <strong>parent</strong> of a <strong>parent </strong>of a person is the person's <strong>grandparent</strong>. A<strong> father</strong> of a parent is a <strong>grandfather</strong> and the <strong>mother</strong> of a <strong>parent</strong> is a <strong>grandmother</strong>.</p>
+
+<p>A <strong>person</strong> is a <strong>sexual-reproducer</strong>. A <strong>man</strong> is a <strong>person</strong> who is also a <strong>male</strong>.  A <strong>woman</strong> is a person who is also a<strong> female</strong>. We define an<strong> infant</strong> as any <strong>person</strong> with an <strong>age</strong> whose value is between 0 and 1 (inclusive) and a <strong>child</strong> as a person whose <strong>age</strong> is between 2 and 18 (inclusive) and an <strong>adult</strong> as a <strong>person</strong> older than 18. Every person is either an <strong>infant</strong>, a <strong>child</strong> or an <strong>adult</strong>. No <strong>person</strong> is more than one of these subtypes.</p>
+<p>A <strong>boy</strong> is defined as a person who is also a <strong>male</strong> thing and not an <strong>adult</strong>. A<strong> girl</strong> is a <strong>female</strong> thing and a <strong>person</strong> who is either an <strong>infant </strong>or a <strong>child</strong>.</p>
+</ul>
+<h2>What and how to submit</h2>
+      
+      <p>Click on TBD to accept the assignment and have github  create a repository that you can put your results into. You can checkout the peeps ontology at<a href="https://github.com/UMBC-CMSC-491-691-F18-Knowledge-Graphs/peeps.git"> https://github.com/UMBC-CMSC-491-691-F18-Knowledge-Graphs/peeps.git</a> which includes an ontology (<a href="https://github.com/UMBC-CMSC-491-691-F18-Knowledge-Graphs/peeps/blob/master/peeps.ttl">peeps.ttl</a>)  and a file of instances (<a href="https://github.com/UMBC-CMSC-491-691-F18-Knowledge-Graphs/peeps/blob/master/mypeeps.ttl">mypeeps.ttl</a>).  These can be used as examples to get you started. We recommend that you load peeps.ttl and mypeeps.ttl into Protege and view the data and schema, rather than just looking at the serialization (which is in Turtle).      </p>
+      <p>You must run the Pellet reasoner to ensure that there are no contradictions and all appropriate inferences are drawn. </p>
+      <p> The HW4 repository will come with stubs for three files you will complete for the homework:</p>
+      <ul>
+        <li><strong>myontology.ttl</strong> - the ontology</li>
+        <li><strong>mydata.ttl</strong> - a file importing the ontology and including data on instances. You should include at least  ten people and at least two instances of each of the types organizations, places, males, females, infants, children and adults. Your data should have examples of all of the appropriate properties.</li>
+	    <li><strong>documentation.md</strong> -- a file in markdown notation describing your ontology and any choices you made that were interesting.</li>
+      </ul><!-- InstanceEndEditable -->
+      <div id="footer" class="donotprint">
+  <div><a href="index.html">CMSC 491/691 Knowledge Graphs&mdash;Fall 2019</a></div>
+        <a href="http://www.cs.umbc.edu/">CSEE</a> |
+		  <a href="http://www.umbc.edu/">UMBC</a></div></p> </td> 
+  </tr>
+</table></body><!-- InstanceEnd --></html>
+
